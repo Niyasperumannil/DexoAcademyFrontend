@@ -1,15 +1,21 @@
 import React from "react";
 import "./Footer.css";
+import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
+      {/* Top Section */}
       <div className="footer-top">
+        {/* Logo */}
         <div className="footer-logo">
           <img src="/dexologoo.png" alt="Pipstick Academy Logo" />
-          <h1>DEXO <span>ACADEMY</span></h1>
+          <h1>
+            DEXO <span>ACADEMY</span>
+          </h1>
         </div>
 
+        {/* Links */}
         <div className="footer-links">
           <div className="footer-column">
             <h3>Company</h3>
@@ -23,11 +29,20 @@ const Footer = () => {
 
           <div className="footer-column">
             <h3>Community</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-               <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                 <li><a href="#">LinkedIn</a></li>
+            <ul className="social-icons">
+              <li><a href="#"><FaInstagram /> Instagram</a></li>
+              <li><a href="#"><FaFacebookF /> Facebook</a></li>
+              <li><a href="#"><FaTwitter /> Twitter</a></li>
+              <li><a href="#"><FaLinkedinIn /> LinkedIn</a></li>
+            </ul>
+          </div>
+            <div className="footer-column">
+            <h3>Community</h3>
+            <ul className="social-icons">
+              <li><a href="#"><FaInstagram /> Instagram</a></li>
+              <li><a href="#"><FaFacebookF /> Facebook</a></li>
+              <li><a href="#"><FaTwitter /> Twitter</a></li>
+              <li><a href="#"><FaLinkedinIn /> LinkedIn</a></li>
             </ul>
           </div>
         </div>
@@ -35,8 +50,9 @@ const Footer = () => {
 
       <hr />
 
+      {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>© 2025 Dexo All Rights Reserved</p>
+        <p>© 2025 Dexo Academy. All Rights Reserved.</p>
       </div>
     </footer>
   );
