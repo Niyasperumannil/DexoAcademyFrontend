@@ -7,7 +7,7 @@ body {
 }
 .pipstick-container {
   background: linear-gradient(90deg, #000000,#120b38,#000000);
-  padding: 10px 0px 100px 0px;
+  padding: 10px 100px 100px 40px;
 }
 .pipstick-container h1 {
   background: linear-gradient(90deg, #000000,#120b38,#000000);
@@ -37,23 +37,25 @@ body {
   background: linear-gradient(90deg, #000000,#120b38,#120b38);
   padding: 2rem;
   border-radius: 1rem;
-  width: 900px;
+  height: 500px;
+  width: 750px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .left-card h2 {
   color: #d0d6ff;
-  font-weight: 400;
+  font-weight: 300;
       margin-bottom: 10px;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .left-card p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
     margin-bottom: 20px;
+    font-weight: 300;
   line-height: 1.6;
   color: #b0b7cc;
 }
@@ -80,14 +82,15 @@ body {
 .right-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.9rem;
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
+  height: 200px;
 }
 
 .card {
   background: linear-gradient(180deg, #140844 0%, #0e041d 100%);
-  padding: 2rem 2rem;
+  padding: 0,1rem 3rem 3rem;
   border-radius: 1rem;
   color: #b0b7cc;
   box-sizing: border-box;
@@ -108,8 +111,8 @@ body {
 }
 
 .card h3 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.1rem;
+  font-weight: 300;
   color: white;
   margin-bottom: 0.5rem;
 }

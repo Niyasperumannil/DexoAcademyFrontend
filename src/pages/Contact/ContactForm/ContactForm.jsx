@@ -41,7 +41,7 @@ const ContactForm = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await axios.post("http://localhost:5005/api/details", formData);
+      const res = await axios.post("https://dexoacademybackend.onrender.com/api/details", formData);
       setStatus({ type: "success", message: res.data.message || "Detail submitted successfully!" });
       setFormData({
         firstname: "",
