@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src="dexologoo.png" alt="Pipstick Academy Logo" />
+          <img src="/dexologoo.png" alt="Pipstick Academy Logo" />
           <h1>DEXO <span>ACADEMY</span></h1>
         </div>
 

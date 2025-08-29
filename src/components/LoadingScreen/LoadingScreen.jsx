@@ -12,7 +12,7 @@ export default function LoadingScreen() {
         if (prev >= 100) {
           clearInterval(timer);
           setTimeout(() => {
-            navigate("/home", { replace: true });
+            navigate("/", { replace: true });
           }, 100); // small delay before redirect
           return 100;
         }
