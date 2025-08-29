@@ -382,7 +382,7 @@ function App() {
       <ul>
         <li>
           <NavLink
-            to="/home"
+            to="/"
             className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
           >
             Home
