@@ -37,19 +37,27 @@ export default function StatsSection() {
       {/* Stats Cards */}
       <div className="stats-cards">
         <div className="stat-card">
-          <h2>15K<span>+</span></h2>
+          <h2>
+            15K<span>+</span>
+          </h2>
           <p>Student Learned</p>
         </div>
         <div className="stat-card">
-          <h2>24<span>+</span></h2>
+          <h2>
+            24<span>+</span>
+          </h2>
           <p>Cities Reached</p>
         </div>
         <div className="stat-card">
-          <h2>8<span>+</span></h2>
+          <h2>
+            8<span>+</span>
+          </h2>
           <p>Countries Covered</p>
         </div>
         <div className="stat-card">
-          <h2>10K<span>+</span></h2>
+          <h2>
+            10K<span>+</span>
+          </h2>
           <p>Traders Community</p>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import React from 'react';
-import './TradingBanner.css'; // external CSS file
+import './TradingBanner.css';
 
 export default function HeroBanner() {
   return (
     <section className="hero-banner">
       <div className="banner-content">
+        {/* Text Section */}
         <div className="text-section">
           <h1 className="banner-title">
             Trading Made Simple<br />and Rewarding
@@ -16,9 +17,13 @@ export default function HeroBanner() {
             Join Our Community
           </button>
         </div>
+
+        {/* Image Section */}
         <div className="image-section">
-          {/* Replace src with your actual image path */}
-          <img src="https://pipstick.in/wp-content/uploads/2025/04/Chart12.png" alt="rising chart" />
+          <img
+            src="https://pipstick.in/wp-content/uploads/2025/04/Chart12.png"
+            alt="rising chart"
+          />
         </div>
       </div>
     </section>

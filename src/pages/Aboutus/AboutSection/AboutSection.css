@@ -1,28 +1,33 @@
+/* ===============================
+   Reset
+================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===============================
+   Desktop Default (unchanged)
+================================= */
 .about-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
   color: white;
-  padding: 5% 10%;
+  padding: 55px 180px;
   gap: 60px;
   overflow: hidden;
 }
 
-/* Animation initial state */
+/* Animation */
 .about-left,
 .about-right {
   opacity: 0;
   transition: all 0.8s ease;
 }
 
-/* Slide-in directions before animation */
 .about-left {
   transform: translateX(-50px);
 }
@@ -31,13 +36,13 @@
   transform: translateX(50px);
 }
 
-/* When the animation class is active */
 .about-section.show .about-left,
 .about-section.show .about-right {
   opacity: 1;
   transform: translateX(0);
 }
 
+/* Text */
 .about-left h1 {
   font-size: 3rem;
   padding: 0px 10px 170px 10px;
@@ -55,26 +60,71 @@
 }
 
 .about-right p {
-  padding: 0px 0px;
   font-size: 1rem;
   line-height: 1.6;
   color: #ddd;
 }
 
-/* Responsive */
+/* ===============================
+   Tablet (<= 992px)
+================================= */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 40px 60px;
+    gap: 40px;
+  }
+
+  .about-left h1 {
+    font-size: 2.5rem;
+    padding: 0px 0px 60px 0px;
+  }
+
+  .about-right {
+    max-width: 100%;
+  }
+}
+
+/* ===============================
+   Mobile (<= 768px)
+================================= */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    padding: 40px 20px;
   }
 
   .about-left h1 {
-    padding: 0px 30px 10px;
     font-size: 2rem;
+    padding: 0 0 20px 0;
   }
 
   .about-right {
-    max-width: 90%;
+    max-width: 95%;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* ===============================
+   Small Mobile (<= 480px)
+================================= */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 15px;
+    gap: 1.5rem;
+  }
+
+  .about-left h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-right p {
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }

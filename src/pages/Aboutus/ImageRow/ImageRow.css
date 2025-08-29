@@ -1,17 +1,23 @@
+/* ===============================
+   Global Reset
+================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===============================
+   Desktop Default (unchanged)
+================================= */
 .image-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
-  padding: 15px 10px 80px 10px;
-  gap: 70px;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
+  padding: 25px 100px;
+  gap: 50px;
+  flex-wrap: wrap; /* allow wrapping for medium screens */
 }
 
 .image-row img.Bitcoin-coin {
@@ -22,33 +28,42 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.image-row img:hover {
+.image-row img.Bitcoin-coin:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
 
-/* Mobile responsiveness */
+/* ===============================
+   Tablet (<= 768px)
+================================= */
 @media (max-width: 768px) {
   .image-row {
-    gap: 20px; /* Reduce gap on smaller screens */
-    padding-top: 50px; /* Add top padding */
+    gap: 30px;              /* tighter spacing */
+    padding: 40px 40px;     /* reduce padding */
   }
 
   .image-row img.Bitcoin-coin {
-    width: 120px; /* Adjust image width */
-    height: 200px; /* Adjust image height */
+    width: 120px;
+    height: 200px;
   }
 }
 
+/* ===============================
+   Mobile (<= 480px)
+================================= */
 @media (max-width: 480px) {
   .image-row {
-    gap: 10px; /* Further reduce gap on very small screens */
-    padding-top: 10px; /* Add top padding */
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center images */
+    justify-content: center;
+    padding: 20px;          /* balanced padding */
+    gap: 20px;
   }
 
   .image-row img.Bitcoin-coin {
-    width: 100px; /* Adjust image width */
-    height: 170px; /* Adjust image height */
+    width: 90%;             /* scale with screen */
+    max-width: 200px;       /* don’t stretch too much */
+    height: auto;           /* keep aspect ratio */
+    border-radius: 12px;
   }
 }
-

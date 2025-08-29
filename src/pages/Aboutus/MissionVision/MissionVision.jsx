@@ -29,7 +29,10 @@ export default function MissionVision() {
     >
       {/* Left Image */}
       <div className="mv-image">
-        <img src="https://pipstick.in/wp-content/uploads/2025/04/About-Us-Main.png" alt="Our Team" />
+        <img
+          src="https://pipstick.in/wp-content/uploads/2025/04/About-Us-Main.png"
+          alt="Our Team"
+        />
       </div>
 
       {/* Right Content */}

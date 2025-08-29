@@ -1,49 +1,50 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==============================
+   Desktop (Unchanged)
+============================== */
 .stats-section {
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 25px 100px;
   overflow: hidden;
 }
 
-/* Image */
 .stats-image img {
   width: 100%;
-  max-width: 500px; /* keeps size like your screenshot */
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
   display: block;
   margin: 0 auto;
 }
 
-/* Cards container */
 .stats-cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.8rem;
   margin-top: 2rem;
 }
 
-/* Individual card */
 .stat-card {
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
   padding: 1.5rem 2rem;
   border-radius: 12px;
-  min-width: 270px;
-  box-shadow: 0 4px 15px #000000,#120b38,#000000;
+  min-width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px #000000,#120b38,#000000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
 
 .stat-card h2 {
@@ -61,7 +62,9 @@
   margin-top: 0.5rem;
 }
 
-/* Scroll animation */
+/* ==============================
+   Scroll Animation
+============================== */
 .stats-section .stat-card,
 .stats-image {
   opacity: 0;
@@ -75,23 +78,88 @@
   transform: translateY(0);
 }
 
-.stats-section.show .stat-card:nth-child(1) { transition-delay: 0.2s; }
-.stats-section.show .stat-card:nth-child(2) { transition-delay: 0.4s; }
-.stats-section.show .stat-card:nth-child(3) { transition-delay: 0.6s; }
-.stats-section.show .stat-card:nth-child(4) { transition-delay: 0.8s; }
+.stats-section.show .stat-card:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.stats-section.show .stat-card:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.stats-section.show .stat-card:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.stats-section.show .stat-card:nth-child(4) {
+  transition-delay: 0.8s;
+}
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .stats-cards {
-    flex-direction: column;
-    align-items: center;
+/* ==============================
+   Tablet (≤ 992px)
+============================== */
+@media (max-width: 992px) {
+  .stats-section {
+    padding: 40px 60px;
   }
 
   .stat-card {
-    width: 90%;
+    min-width: 280px;
+  }
+
+  .stat-card h2 {
+    font-size: 3rem;
+  }
+}
+
+/* ==============================
+   Mobile (≤ 768px)
+============================== */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 40px 20px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .stat-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .stat-card p {
+    font-size: 0.95rem;
   }
 
   .stats-image img {
     max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ==============================
+   Small Mobile (≤ 480px)
+============================== */
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 30px 15px;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .stat-card h2 {
+    font-size: 2rem;
+  }
+
+  .stat-card p {
+    font-size: 0.85rem;
   }
 }
