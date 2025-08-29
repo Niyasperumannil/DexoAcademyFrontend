@@ -29,7 +29,7 @@ const BlogCards = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://localhost:5005/api/blog");
+        const res = await axios.get("https://dexoacademybackend.onrender.com/api/blog");
         setBlogPosts(res.data);
       } catch (err) {
         console.error("Failed to load blogs", err);
