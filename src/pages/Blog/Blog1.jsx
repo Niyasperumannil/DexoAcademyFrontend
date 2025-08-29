@@ -374,7 +374,7 @@ function App() {
       {/* Header/Navigation */}
       <header className="header">
         <div className="logo-container">
-          <img src="/dexologoo.png" alt="Pipstick Academy Logo" className="logo" />
+          <img src="dexologoo.png" alt="Pipstick Academy Logo" className="logo" />
         </div>
         
         {/* Desktop Navbar */}
@@ -382,7 +382,7 @@ function App() {
       <ul>
         <li>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
           >
             Home
@@ -423,7 +423,7 @@ function App() {
         </button>
         <nav className="mobile-navbar">
           <ul>
-            <li><a href="/home" className="nav-link active">Home</a></li>
+            <li><a href="/" className="nav-link active">Home</a></li>
             <li><a href="/about" className="nav-link">About Us</a></li>
             <li><a href="/blog" className="nav-link">Blog</a></li>
             <li><a href="/contact" className="nav-link">Contact</a></li>

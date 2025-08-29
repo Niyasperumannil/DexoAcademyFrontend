@@ -382,7 +382,7 @@ function App() {
       <ul>
         <li>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
           >
             Home
@@ -423,7 +423,7 @@ function App() {
         </button>
         <nav className="mobile-navbar">
           <ul>
-            <li><a href="/home" className="nav-link active">Home</a></li>
+            <li><a href="/" className="nav-link active">Home</a></li>
             <li><a href="/about" className="nav-link">About Us</a></li>
             <li><a href="/blog" className="nav-link">Blog</a></li>
             <li><a href="/contact" className="nav-link">Contact</a></li>
@@ -435,13 +435,13 @@ function App() {
       {/* Hero Section */}
       <main className="hero-section">
         <div className="hero-content">
-          <p className="tagline">Learn</p>
+          <p className="tagline">Learn. Trade. Grow.</p>
           <h1 className="hero-title">Master the Markets<br/>with Dexo Academy</h1>
           <p className="hero-subtitle">
             Step into the world of trading with expert-led education, hands-on strategies, and powerful tools built for success.
           </p>
           <div className="cta-buttons">
-           
+            
           </div>
         </div>
       </main>
