@@ -1,8 +1,20 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Desktop (unchanged)
+============================== */
 .marquee-wrapper {
   overflow: hidden;
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
-  padding: 70px 0;
-  width: 100%;
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
+  padding: 40px 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  max-width: 1700px;
 }
 
 .marquee-content {
@@ -18,7 +30,7 @@
   font-size: 28px;
   font-weight: 500;
   color: #5e27c5;
-  padding-right: 100px; /* space between repeats */
+  padding-right: 100px;
 }
 
 .highlight {
@@ -27,20 +39,18 @@
   font-weight: bold;
 }
 
-/* --------------------------- */
-/* Keyframes */
-/* --------------------------- */
+/* Animation */
 @keyframes scroll-left {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
 
-/* --------------------------- */
-/* Tablet Responsive */
-/* --------------------------- */
+/* ==============================
+   Tablet (≤ 1024px)
+============================== */
 @media (max-width: 1024px) {
   .marquee-wrapper {
-    padding: 50px 0;
+    padding: 55px 0;
   }
   .marquee-text {
     font-size: 24px;
@@ -51,9 +61,9 @@
   }
 }
 
-/* --------------------------- */
-/* Mobile Responsive */
-/* --------------------------- */
+/* ==============================
+   Mobile (≤ 768px)
+============================== */
 @media (max-width: 768px) {
   .marquee-wrapper {
     padding: 40px 0;
@@ -63,22 +73,23 @@
     padding-right: 60px;
   }
   .marquee-content {
-    animation-duration: 8s; /* slightly faster */
+    animation-duration: 9s; /* smoother scroll */
   }
 }
 
-/* --------------------------- */
-/* Small Phones */
-/* --------------------------- */
+/* ==============================
+   Small Phones (≤ 480px)
+============================== */
 @media (max-width: 480px) {
   .marquee-wrapper {
-    padding: 30px 0;
+    padding: 30px 10px; /* prevent side overflow */
   }
   .marquee-text {
     font-size: 16px;
-    padding-right: 40px;
+    padding-right: 45px;
+    line-height: 1.4; /* more breathing room */
   }
   .marquee-content {
-    animation-duration: 6s; /* faster for small screens */
+    animation-duration: 8s; /* not too fast */
   }
 }

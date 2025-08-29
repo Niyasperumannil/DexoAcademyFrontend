@@ -16,7 +16,7 @@
   align-items: center;
   background: linear-gradient(90deg, #000000, #120b38, #000000);
   padding: 25px 130px;
-  gap: 10px;
+  gap: 23px;
   flex-wrap: wrap; /* allow wrapping for medium screens */
 }
 

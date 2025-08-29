@@ -13,8 +13,9 @@ const Banner = () => {
   return (
     <div className="marquee-wrapper">
       <div className="marquee-content">
+        {/* Duplicate for smooth infinite scroll */}
         <div className="marquee-text">{content}</div>
-        <div className="marquee-text">{content}</div> {/* duplicate */}
+        <div className="marquee-text">{content}</div>
       </div>
     </div>
   );

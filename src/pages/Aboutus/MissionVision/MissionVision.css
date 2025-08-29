@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8rem;
+  gap: 1rem;
   padding: 55px 100px;
   background: linear-gradient(90deg, #000000, #120b38, #000000);
   color: white;
@@ -27,7 +27,7 @@
 }
 
 .mv-content {
-  max-width: 800px;
+  max-width: 770px;
   padding: 1px;
 }
 
