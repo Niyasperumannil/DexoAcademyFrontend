@@ -1,4 +1,10 @@
 /* Contact Container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .contact-container {
   display: flex;
   gap: 2rem;

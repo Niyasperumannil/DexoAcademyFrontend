@@ -1,4 +1,10 @@
 /* Full-screen black background with no scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .loading-container {
   position: fixed;      /* Stay fixed above everything */
   top: 0;

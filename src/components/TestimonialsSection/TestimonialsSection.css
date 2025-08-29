@@ -1,5 +1,11 @@
 /* Base Styles */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .testimonials-section {
   background: linear-gradient(90deg, #000000,#120b38,#000000);
   color: white;
