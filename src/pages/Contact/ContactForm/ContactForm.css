@@ -1,0 +1,168 @@
+/* Contact Container */
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  padding: 8rem;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px #000000,#120b38,#000000;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left Section */
+.contact-left {
+  flex: 1;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: inset 0 0 20px #000000,#120b38,#000000;
+  animation: fadeInUp 0.8s ease;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7d10bc;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/* Inputs & Textarea */
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #444;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+textarea {
+  width: 100%; /* Makes it full width of the container */
+  max-width: 700px; /* Limit so it doesn’t get too big on large screens */
+  min-height: 150px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical; /* Allow only vertical resizing */
+}
+input:hover,
+textarea:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #1f082c;
+  box-shadow: 0 0 8px #1f082c;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+  padding-bottom: 20px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(145deg, #1f082c, #1f082c);
+  padding: 19px 29px;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: glow 1.8s infinite alternate;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7d10bc;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #7d10bc;
+  }
+  100% {
+    box-shadow: 0 0 20px #7d10bc;
+  }
+}
+
+/* Right Section */
+.contact-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+.contact-right h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #7d10bc;
+}
+
+.contact-right p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.icon {
+  color: #7d10bc;
+  font-size: 1.1rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

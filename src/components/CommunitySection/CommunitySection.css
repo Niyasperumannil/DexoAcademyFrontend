@@ -1,0 +1,121 @@
+/* Global body styling to make entire page background black */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  color: #fff;
+}
+
+/* Base styles */
+.community-section {
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.community-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.community-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1900px;
+  width: 100%;
+  gap: 250px;
+  color: white;
+}
+
+.community-image img {
+  width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 15px;
+  object-fit: cover;
+  max-width: 600px;
+}
+
+.community-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.community-content h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 20px 0 16px;
+}
+
+.community-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+  margin-bottom: 24px;
+}
+
+.story-button,
+.read-more {
+  background-color: #3d2b2b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.story-button {
+  background-color: #1d1d1d;
+  border: 1px solid #5a5a5a;
+}
+
+.story-button:hover,
+.read-more:hover {
+  background-color: #5a3d3d;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 800px) {
+  .community-section {
+    padding: 60px 20px;
+  }
+
+  .community-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .community-image img {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .community-content {
+    text-align: center;
+  }
+
+  .community-content h2 {
+    font-size: 2.2rem;
+    margin: 16px 0;
+  }
+
+  .community-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .story-button,
+  .read-more {
+    width: auto;
+    margin: 0 auto 12px;
+  }
+}

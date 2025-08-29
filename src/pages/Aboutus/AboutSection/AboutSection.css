@@ -1,0 +1,74 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  color: white;
+  padding: 5% 10%;
+  gap: 60px;
+  overflow: hidden;
+}
+
+/* Animation initial state */
+.about-left,
+.about-right {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Slide-in directions before animation */
+.about-left {
+  transform: translateX(-50px);
+}
+
+.about-right {
+  transform: translateX(50px);
+}
+
+/* When the animation class is active */
+.about-section.show .about-left,
+.about-section.show .about-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-left h1 {
+  font-size: 3rem;
+  padding: 0px 10px 170px 10px;
+  font-weight: 400;
+  color: #888;
+  margin: 0;
+}
+
+.about-left h1 span {
+  color: #bbb;
+}
+
+.about-right {
+  max-width: 800px;
+}
+
+.about-right p {
+  padding: 0px 0px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-left h1 {
+    padding: 0px 30px 10px;
+    font-size: 2rem;
+  }
+
+  .about-right {
+    max-width: 90%;
+  }
+}

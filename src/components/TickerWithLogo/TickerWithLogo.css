@@ -1,0 +1,111 @@
+.market-ticker-multirow {
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  padding: 40px 90px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #ccc;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 100%;
+}
+
+/* Hide overflow so marquee is clipped */
+.marquee-container {
+  overflow: hidden;
+  border-bottom: 1px solid #333;
+}
+
+/* The scrolling content */
+.marquee-content {
+  display: flex;
+  gap: 15px;
+  animation: marqueeRightToLeft 30s linear infinite;
+  will-change: transform;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+
+/* Right to left marquee animation */
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.market-row {
+  display: flex;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+.market-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.market-name {
+  display: flex;
+  align-items: center;
+  color: #999;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.market-icon {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.market-price {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #fff;
+}
+
+.market-change {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.market-change.positive {
+  color: #14c76f; /* green */
+}
+
+.market-change.negative {
+  color: #2222e4; /* red */
+}
+
+.percent {
+  margin-left: 4px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.separator {
+  height: 20px;
+  width: 1px;
+  background: #333;
+  margin-left: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .market-ticker-multirow {
+    padding: 20px 10px;        /* Smaller padding for compact layout */
+    font-size: 12px;           /* Adjust font size for readability */
+    gap: 6px;                  /* More comfortable vertical spacing */
+  }
+
+  .marquee-content {
+    animation-duration: 20s;   /* Faster scroll for shorter screens */
+  }
+
+  .market-item {
+    gap: 10px;                 /* Tighten spacing between items */
+  }
+}

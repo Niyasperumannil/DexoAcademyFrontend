@@ -1,0 +1,111 @@
+/* TeamSection.css */
+.team-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.team-content {
+  max-width: 600px;
+}
+
+.team-tag {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #2d2d2d;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+
+.team-heading {
+  font-size: 3.2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  max-width: 27ch;            /* Adjust as needed */
+  text-wrap: balance;         /* Balances words across lines */
+}
+
+
+
+.team-description {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.join-button {
+  background-color: #2d1381;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 16px #2d1381;
+  transition: 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #2d1381;
+  box-shadow: 0 0 24px #2d1381;
+}
+
+.team-image-container {
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+@media (max-width: 900px) {
+  .team-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .team-content {
+    max-width: 100%;
+  }
+
+  .team-heading {
+    font-size: 2.2rem;
+  }
+
+  .team-description {
+    font-size: 0.95rem;
+  }
+
+  .team-image-container {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .team-heading {
+    font-size: 1.8rem;
+  }
+
+  .join-button {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .team-tag {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}

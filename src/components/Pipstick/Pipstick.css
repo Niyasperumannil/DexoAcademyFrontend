@@ -1,0 +1,254 @@
+body {
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  color: #bbb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.pipstick-container {
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  padding: 10px 0px 100px 0px;
+}
+.pipstick-container h1 {
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+.pipstick-container h1 .highlight {
+  color: #d0d0d0;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+
+}
+
+.content-wrapper {
+  display: flex;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  gap: 2rem;
+  padding: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left-card {
+  background: linear-gradient(90deg, #000000,#120b38,#120b38);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 900px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.left-card h2 {
+  color: #d0d6ff;
+  font-weight: 400;
+      margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+.left-card p {
+  font-size: 1.3rem;
+    margin-bottom: 20px;
+  line-height: 1.6;
+  color: #b0b7cc;
+}
+
+.join-btn {
+  background: #220852;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #220852;
+  width: fit-content;
+  transition: background 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #220852;
+  box-shadow: 0 0 30px #220852;
+}
+
+.right-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 320px;
+}
+
+.card {
+  background: linear-gradient(180deg, #140844 0%, #0e041d 100%);
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  color: #b0b7cc;
+  box-sizing: border-box;
+}
+
+.top-card .avatars {
+  display: flex;
+  gap: -8px;
+  margin-bottom: 1rem;
+}
+
+.top-card .avatars img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-red {
+  color: #1b1365;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #b0b7cc;
+}
+
+.bottom-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.bottom-card .icon {
+  background: #0a124a;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.bottom-card h3 {
+  margin: 0;
+  flex: 1;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    margin: 0px 0px;
+  }
+
+  .pipstick-container h1 {
+    font-size: 2rem;
+    padding: 0px 0px 0px;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    padding: 20px 21px ;
+    align-items: center;
+  }
+
+  .left-card {
+    width: 100%;
+    padding: 0.1rem ;
+  }
+
+  .left-card h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .left-card p {
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+
+  .join-btn {
+    align-self: center;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .right-cards {
+    width: 100%;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .top-card .avatars {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .top-card .avatars img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .bottom-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom-card .icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .bottom-card h3 {
+    margin: 0;
+  }
+}

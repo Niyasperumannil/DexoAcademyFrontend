@@ -1,0 +1,84 @@
+.marquee-wrapper {
+  overflow: hidden;
+  background: linear-gradient(90deg, #000000,#120b38,#000000);
+  padding: 70px 0;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 12s linear infinite;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #5e27c5;
+  padding-right: 100px; /* space between repeats */
+}
+
+.highlight {
+  margin: 0 20px;
+  color: #5e27c5;
+  font-weight: bold;
+}
+
+/* --------------------------- */
+/* Keyframes */
+/* --------------------------- */
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --------------------------- */
+/* Tablet Responsive */
+/* --------------------------- */
+@media (max-width: 1024px) {
+  .marquee-wrapper {
+    padding: 50px 0;
+  }
+  .marquee-text {
+    font-size: 24px;
+    padding-right: 80px;
+  }
+  .marquee-content {
+    animation-duration: 10s;
+  }
+}
+
+/* --------------------------- */
+/* Mobile Responsive */
+/* --------------------------- */
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    padding: 40px 0;
+  }
+  .marquee-text {
+    font-size: 20px;
+    padding-right: 60px;
+  }
+  .marquee-content {
+    animation-duration: 8s; /* slightly faster */
+  }
+}
+
+/* --------------------------- */
+/* Small Phones */
+/* --------------------------- */
+@media (max-width: 480px) {
+  .marquee-wrapper {
+    padding: 30px 0;
+  }
+  .marquee-text {
+    font-size: 16px;
+    padding-right: 40px;
+  }
+  .marquee-content {
+    animation-duration: 6s; /* faster for small screens */
+  }
+}

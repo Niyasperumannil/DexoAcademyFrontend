@@ -1,0 +1,34 @@
+// TeamSection.jsx
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './TeamSection.css';
+
+const TeamSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  return (
+    <section className="team-section">
+      <div className="team-content" data-aos="fade-right">
+        <button className="team-tag">Our Team</button>
+<h1 className="team-heading">
+  Experts Guiding Your<br />
+  Trading Journey
+</h1>
+
+        <p className="team-description">
+          Led by experienced traders and analysts, Pipstick equips you with the skills to navigate today’s markets.
+        </p>
+        <button className="join-button">Join Now</button>
+      </div>
+
+      <div className="team-image-container" data-aos="fade-left">
+        <img src='https://pipstick.in/wp-content/uploads/2025/04/About-Us-Main.png'alt="Team" className="team-image" />
+      </div>
+    </section>
+  );
+};
+
+export default TeamSection;
