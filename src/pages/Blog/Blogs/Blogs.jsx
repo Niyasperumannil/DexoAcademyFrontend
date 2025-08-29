@@ -18,7 +18,7 @@ const BlogDetail = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get(`https://dexoacademybackend.onrender.com/${id}`);
+        const res = await axios.get(`https://dexoacademybackend.onrender.com/api/blog/${id}`);
         setPost(res.data);
       } catch (err) {
         console.error("Failed to fetch blog:", err);
