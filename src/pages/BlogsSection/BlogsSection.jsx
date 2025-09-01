@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import './BlogsSection.css';
 
-const BlogsSection = () => {
+const DexoBlogsSection = () => {
   const [form, setForm] = useState({
     title: '',
     written: '',
@@ -39,11 +39,14 @@ const BlogsSection = () => {
       if (image) {
         const formData = new FormData();
         formData.append('images', image);
-        const uploadRes = await axios.post('https://dexoacademybackend.onrender.com/api/upload', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' },
-        });
+        const uploadRes = await axios.post(
+          'https://dexoacademybackend.onrender.com/api/upload',
+          formData,
+          { headers: { 'Content-Type': 'multipart/form-data' } }
+        );
         imageUrl = uploadRes.data.urls[0];
       }
+
       await axios.post('https://dexoacademybackend.onrender.com/api/blog', {
         ...form,
         image: imageUrl,
@@ -62,9 +65,9 @@ const BlogsSection = () => {
   };
 
   return (
-    <div className="blog-container">
-      <form className="blog-form" onSubmit={handleSubmit}>
-        <h2 className="blog-title">📝 Create a New Blog</h2>
+    <div className="dexo-blog-container">
+      <form className="dexo-blog-form" onSubmit={handleSubmit}>
+        <h2 className="dexo-blog-title">📝 Create a New Blog</h2>
 
         <input
           type="text"
@@ -96,7 +99,7 @@ const BlogsSection = () => {
         <input type="file" accept="image/*" onChange={handleImageChange} />
 
         {preview && (
-          <div className="image-preview">
+          <div className="dexo-image-preview">
             <img src={preview} alt="Preview" />
           </div>
         )}
@@ -109,4 +112,4 @@ const BlogsSection = () => {
   );
 };
 
-export default BlogsSection;
+export default DexoBlogsSection;
