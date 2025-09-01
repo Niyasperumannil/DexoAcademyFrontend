@@ -156,7 +156,8 @@ function App() {
 
         <div className="cta-buttons">
           <button className="cta-demo">Try Demo</button>
-          <button className="cta-apply">Apply Now</button>
+                    <button className="cta-demo">Apply Now</button>
+
         </div>
       </main>
     </div>

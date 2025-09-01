@@ -9,6 +9,11 @@ import About from "../src/pages/Aboutus/Aboutus"
 import Blog from "../src/pages/Blog/Blog"
 import Contact from '../src/pages/Contact/Contact'
 import Blogs from "./pages/Blog/Blogs/Blogs";
+import Login from "./pages/Login/Login";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
+import DetailsShow from "./pages/DetailsShow/detailsShow";
+import BlogShow from "./pages/BlogShow/blogShow";
+import BlogsSection from "./pages/BlogsSection/BlogsSection"
 
 function App() {
   useEffect(() => {
@@ -23,6 +28,12 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog/:id" element={<Blogs />} />
+      <Route path="/adminLogin" element={<Login />} />
+      <Route path="/Admin-panel" element={<AdminPanel />} />
+      <Route path="/Show-Details" element={<DetailsShow />} />
+      {/* <Route path="/blog-Add" element={<Blogs />} /> */}
+      <Route path="/blog-show" element={<BlogShow />} />
+      <Route path="/blogs-section" element={<BlogsSection />} />
     </Routes>
   );
 }
