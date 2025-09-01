@@ -14,9 +14,12 @@ export default function HeroBanner() {
             Take control of your career. Join Dexo Academy’s community and master
             SEO, Social Media, and Paid Ads with real-world strategies.
           </p>
-          <button className="banner-cta">
+      <button
+  className="read-more"
+  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+>
             Join Our Academy
-          </button>
+</button>
         </div>
 
         {/* Image Section */}

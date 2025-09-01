@@ -22,7 +22,12 @@ const TeamSection = () => {
           Led by experienced marketers and strategists, Dexo Academy equips you with the skills to excel in today’s
           competitive digital landscape.
         </p>
-        <button className="join-button">Join Now</button>
+<button
+  className="read-more"
+  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+>
+  Join Now
+</button>
       </div>
 
       <div className="team-image-container" data-aos="fade-left">

@@ -42,7 +42,12 @@ const CommunitySection = () => {
             empowering learners to master digital marketing with hands-on strategies
             used by industry experts worldwide.
           </p>
-          <button className="read-more">Read More</button>
+<button
+  className="read-more"
+  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+>
+  Read More
+</button>
         </div>
       </div>
     </section>

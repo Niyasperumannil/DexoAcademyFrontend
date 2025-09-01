@@ -44,8 +44,11 @@ const Pipstick = () => {
             build confidence, master strategies, and prepare for global certifications
             that boost your career opportunities.
           </p>
-          <button className="join-btn">Enroll Now</button>
-        </div>
+<button
+  className="read-more"
+  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+>
+Enroll Now</button>        </div>
 
         {/* Right Section */}
         <div className="right-cards animate-on-scroll">

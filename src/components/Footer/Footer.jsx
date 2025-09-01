@@ -36,13 +36,14 @@ const Footer = () => {
               <li><a href="#"><FaLinkedinIn /> LinkedIn</a></li>
             </ul>
           </div>
-            <div className="footer-column">
-            <h3>Community</h3>
-            <ul className="social-icons">
-              <li><a href="#"><FaInstagram /> Instagram</a></li>
-              <li><a href="#"><FaFacebookF /> Facebook</a></li>
-              <li><a href="#"><FaTwitter /> Twitter</a></li>
-              <li><a href="#"><FaLinkedinIn /> LinkedIn</a></li>
+
+          {/* Contact Info Column (replaced duplicate Community) */}
+          <div className="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+              <li><a href="mailto:info@dexoacademy.com">✉️ info@dexoacademy.com</a></li>
+              <li><a href="#">🏢 123 Dexo Street, Kochi, India</a></li>
             </ul>
           </div>
         </div>

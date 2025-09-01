@@ -115,22 +115,19 @@ function App() {
       {/* HERO SECTION with step reveal */}
       <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
         <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
-          Learn. Apply. Repeat.
-        </p>
+Our Blog        </p>
         <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
-          Master Digital Marketing
-          <br />
-          with Dexo Academy
-        </h1>
+Stay Ahead with Our          <br />
+Insights        </h1>
         <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
-          Join our Digital Marketing Course in Cherpulassery and gain
-          industry-ready skills with hands-on training, real client
-          projects, and expert-led sessions designed to make you job-ready.
-        </p>
+Join our Digital Marketing Course in Cherpulassery and gain industry-ready skills with hands-on training, real client projects, and expert-led sessions designed to make you job-ready.        </p>
 
         <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-          <button className="dexoacademy-cta-demo">Try Now</button>
-        </div>
+<button
+  className="dexoacademy-cta-demo"
+  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+>
+Talk to Expert</button>        </div>
       </main>
     </div>
   );

@@ -128,10 +128,24 @@ function App() {
           projects, and expert-led sessions designed to make you job-ready.
         </p>
 
-        <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-          <button className="dexoacademy-cta-demo">Try Demo</button>
-          <button className="dexoacademy-cta-apply">Apply Now</button>
-        </div>
+<div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
+  <button
+    className="dexoacademy-cta-demo"
+    onClick={() => window.open("https://www.youtube.com/watch?v=QusJ4fpWQwA", "_blank")}
+  >
+    Try Demo
+  </button>
+
+  <button
+    className="dexoacademy-cta-apply"
+    onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+  >
+    Apply Now
+  </button>
+</div>
+
+
+
       </main>
     </div>
   );

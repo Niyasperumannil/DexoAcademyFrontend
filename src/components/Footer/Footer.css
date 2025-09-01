@@ -54,15 +54,16 @@
 
 /* Links Section */
 .footer-links {
-  display: flex;
-  gap: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  gap: 80px;
   flex: 2;
-  flex-wrap: wrap;
   padding-left: 100px;
 }
 
 .footer-column {
   font-size: 1.2rem;
+  min-width: 180px;
 }
 
 .footer-column h3 {
@@ -119,8 +120,9 @@ hr {
 =========================== */
 @media (max-width: 1024px) {
   .footer-links {
-    padding-left: 0;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium */
     gap: 60px;
+    padding-left: 0;
   }
 }
 
@@ -139,10 +141,11 @@ hr {
   }
 
   .footer-links {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Stack all columns */
     gap: 25px;
     padding-left: 0;
+    justify-items: center;
+    text-align: center;
   }
 
   .footer-column {
