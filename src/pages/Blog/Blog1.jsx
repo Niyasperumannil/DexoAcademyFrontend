@@ -115,7 +115,8 @@ function App() {
       {/* HERO SECTION with step reveal */}
       <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
         <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
-Our Blog        </p>
+          Learn. Apply. Repeat.
+        </p>
         <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
 Stay Ahead with Our          <br />
 Insights        </h1>
