@@ -43,10 +43,11 @@ export default function MissionVision() {
             <span>Our</span> Mission
           </h2>
           <p>
-            To democratize trading education and give individuals the tools they
-            need to make informed, confident financial decisions. Through
-            practical learning, community support, and expert mentorship, we’re
-            helping people reshape their financial future.
+            To make quality digital marketing education accessible to everyone
+            and empower individuals with the skills they need to succeed online.
+            Through practical training, real client projects, and expert
+            mentorship, we’re preparing learners to build impactful careers in
+            the digital world.
           </p>
         </div>
 
@@ -56,10 +57,10 @@ export default function MissionVision() {
             <span>Our</span> Vision
           </h2>
           <p>
-            To build a global network of financially aware individuals empowered
-            to thrive in any market condition. We envision a world where everyone
-            has the knowledge and confidence to take control of their financial
-            journey.
+            To build a global community of digital marketers who create, innovate,
+            and lead the future of online business. We envision a world where
+            every learner is confident, industry-ready, and capable of driving
+            measurable digital growth.
           </p>
         </div>
       </div>

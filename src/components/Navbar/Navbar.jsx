@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
@@ -9,48 +9,51 @@ function App() {
   const handleContactClick = () => navigate("/contact");
   const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Intersection observer for hero reveal
+  const heroRef = useRef(null);
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("is-visible");
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.25 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <div className="app-container">
+    <div className="dexoacademy-app-container">
       {/* HEADER */}
-      <header className="header">
-        <div className="logo-container">
+      <header className="dexoacademy-header">
+        <div className="dexoacademy-logo-container">
           <img
             src="dexologoo.png"
             alt="Dexo Academy Logo"
-            className="logo"
+            className="dexoacademy-logo"
           />
         </div>
 
         {/* Desktop Navbar */}
-        <nav className="navbar">
+        <nav className="dexoacademy-navbar">
           <ul>
             <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >
+              <NavLink to="/" className="dexoacademy-nav-link">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >
+              <NavLink to="/about" className="dexoacademy-nav-link">
                 About Us
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >
+              <NavLink to="/blog" className="dexoacademy-nav-link">
                 Blog
               </NavLink>
             </li>
@@ -58,7 +61,7 @@ function App() {
         </nav>
 
         <button
-          className="contact-button"
+          className="dexoacademy-contact-button"
           onClick={handleContactClick}
         >
           Contact
@@ -66,7 +69,7 @@ function App() {
 
         {/* Mobile Burger Menu */}
         <button
-          className="burger-menu-button"
+          className="dexoacademy-burger-menu-button"
           onClick={toggleMobileMenu}
           aria-label="Open mobile menu"
         >
@@ -75,89 +78,59 @@ function App() {
       </header>
 
       {/* MOBILE MENU */}
-      <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+      <div className={`dexoacademy-mobile-menu ${isMenuOpen ? "open" : ""}`}>
         <button
-          className="close-menu-button"
+          className="dexoacademy-close-menu-button"
           onClick={toggleMobileMenu}
           aria-label="Close mobile menu"
         >
           ❌
         </button>
-        <nav className="mobile-navbar">
+        <nav className="dexoacademy-mobile-navbar">
           <ul>
             <li>
-              <NavLink
-                to="/home"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-                onClick={toggleMobileMenu}
-              >
+              <NavLink to="/" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-                onClick={toggleMobileMenu}
-              >
+              <NavLink to="/about" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
                 About Us
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-                onClick={toggleMobileMenu}
-              >
+              <NavLink to="/blog" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
                 Blog
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-                onClick={toggleMobileMenu}
-              >
+              <NavLink to="/contact" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
                 Contact
               </NavLink>
             </li>
           </ul>
         </nav>
-        <button
-          className="contact-button mobile-contact-button"
-          onClick={handleContactClick}
-        >
-          Contact
-        </button>
       </div>
 
-      {/* HERO SECTION */}
-      <main className="hero-section">
-        <p className="tagline">Learn. Apply. Repeat.</p>
-        <h1 className="hero-title">
+      {/* HERO SECTION with step reveal */}
+      <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
+        <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
+          Learn. Apply. Repeat.
+        </p>
+        <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
           Master Digital Marketing
           <br />
           with Dexo Academy
         </h1>
-        <p className="hero-subtitle">
+        <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
           Join our Digital Marketing Course in Cherpulassery and gain
           industry-ready skills with hands-on training, real client
-          projects, and expert-led sessions designed to make you
-          job-ready.
+          projects, and expert-led sessions designed to make you job-ready.
         </p>
 
-        <div className="cta-buttons">
-          <button className="cta-demo">Try Demo</button>
-                    <button className="cta-demo">Apply Now</button>
-
+        <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
+          <button className="dexoacademy-cta-demo">Try Demo</button>
+          <button className="dexoacademy-cta-apply">Apply Now</button>
         </div>
       </main>
     </div>

@@ -31,16 +31,16 @@ const CommunitySection = () => {
         <div className="community-image">
           <img
             src="https://pipstick.in/wp-content/uploads/2025/04/Story-main.png"
-            alt="Audience in a trading seminar"
+            alt="Students in a digital marketing workshop"
           />
         </div>
         <div className="community-content">
           <button className="story-button">Our Story</button>
-          <h2>Building a Global Trading Community</h2>
+          <h2>Building a Global Digital Marketing Community</h2>
           <p>
-            Pipstick was created to bridge the gap between knowledge and action,
-            empowering individuals to trade confidently with practical, real‑world
-            strategies.
+            Dexo Academy was founded to bridge the gap between theory and practice,
+            empowering learners to master digital marketing with hands-on strategies
+            used by industry experts worldwide.
           </p>
           <button className="read-more">Read More</button>
         </div>

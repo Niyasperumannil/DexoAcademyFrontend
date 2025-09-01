@@ -6,8 +6,9 @@ export default function ContactCards() {
     <section className="contact-section">
       <h2 className="section-title">Talk To Us</h2>
       <p className="section-subtitle">
-        We operate globally with a mission to empower traders everywhere. Reach
-        out via email or social media — we’ll respond as soon as possible.
+        We operate globally with a mission to empower learners in digital
+        marketing. Reach out via email or social media — we’ll respond as soon
+        as possible.
       </p>
 
       <div className="contact-cards">
@@ -17,8 +18,8 @@ export default function ContactCards() {
           </div>
           <h3>General Inquiries</h3>
           <p>
-            Have a question about a course or enrollment process? We're here to
-            help every step of the way.
+            Have a question about our courses, curriculum, or enrollment
+            process? We're here to guide you at every step.
           </p>
         </div>
 
@@ -28,8 +29,8 @@ export default function ContactCards() {
           </div>
           <h3>Technical Support</h3>
           <p>
-            Facing login issues or need help navigating the platform? Our
-            support team has your back.
+            Facing login issues or need help accessing online classes and
+            resources? Our support team is ready to assist.
           </p>
         </div>
 
@@ -39,8 +40,8 @@ export default function ContactCards() {
           </div>
           <h3>Partnerships & Collaborations</h3>
           <p>
-            Want to collaborate, become an affiliate, or invite us for a
-            speaking session? We'd love to hear from you!
+            Want to collaborate, invite us for a seminar, or discuss corporate
+            training opportunities? We’d love to connect with you!
           </p>
         </div>
       </div>

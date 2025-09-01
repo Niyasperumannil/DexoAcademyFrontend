@@ -4,32 +4,33 @@
   box-sizing: border-box;
 }
 
-.market-ticker-multirow {
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
+.institute-ticker-multirow {
+  background: linear-gradient(90deg, #000000, #120b38, #000000);
   padding: 40px 160px;
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #e5e7eb;
   user-select: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   max-width: 100%;
+  overflow: hidden;
 }
 
 /* Hide overflow so marquee is clipped */
 .marquee-container {
   overflow: hidden;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
 }
 
 /* The scrolling content */
 .marquee-content {
   display: flex;
-  gap: 15px;
-  animation: marqueeRightToLeft 30s linear infinite;
+  gap: 25px;
+  animation: marqueeRightToLeft 35s linear infinite;
   will-change: transform;
-  padding: 6px 0;
+  padding: 10px 0;
   white-space: nowrap;
 }
 
@@ -43,75 +44,91 @@
   }
 }
 
-.market-row {
+.institute-row {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   white-space: nowrap;
 }
 
-.market-item {
+.institute-item {
   display: flex;
   align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
-.market-name {
+.institute-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.institute-name {
   display: flex;
   align-items: center;
-  color: #999;
-  margin-right: 8px;
-  font-weight: 500;
-}
-
-.market-icon {
-  margin-right: 4px;
-  font-size: 16px;
-}
-
-.market-price {
-  font-weight: 700;
-  margin-right: 8px;
-  color: #fff;
-}
-
-.market-change {
   font-weight: 600;
-  display: flex;
-  align-items: center;
+  color: #4ade80; /* green highlight for titles */
+  margin-right: 6px;
 }
 
-.market-change.positive {
-  color: #14c76f; /* green */
+.institute-icon {
+  margin-right: 6px;
+  font-size: 18px;
 }
 
-.market-change.negative {
-  color: #2222e4; /* red */
-}
-
-.percent {
-  margin-left: 4px;
-  font-size: 12px;
-  opacity: 0.8;
+.institute-desc {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #d1d5db;
 }
 
 .separator {
-  height: 20px;
+  height: 22px;
   width: 1px;
-  background: #333;
-  margin-left: 15px;
+  background: #444;
+  margin-left: 20px;
 }
-@media only screen and (max-width: 768px) {
-  .market-ticker-multirow {
-    padding: 20px 10px;        /* Smaller padding for compact layout */
-    font-size: 12px;           /* Adjust font size for readability */
-    gap: 6px;                  /* More comfortable vertical spacing */
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+  .institute-ticker-multirow {
+    padding: 20px 30px;
+    font-size: 13px;
+    gap: 10px;
   }
 
   .marquee-content {
-    animation-duration: 20s;   /* Faster scroll for shorter screens */
+    animation-duration: 25s; /* Faster scroll on smaller screens */
+    gap: 18px;
   }
 
-  .market-item {
-    gap: 10px;                 /* Tighten spacing between items */
+  .institute-item {
+    padding: 6px 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .institute-ticker-multirow {
+    padding: 15px 10px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .marquee-content {
+    animation-duration: 20s;
+    gap: 12px;
+  }
+
+  .institute-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 10px;
+  }
+
+  .separator {
+    display: none; /* cleaner on mobile */
   }
 }

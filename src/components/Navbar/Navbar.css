@@ -1,7 +1,5 @@
-/* =======================
-   Base Styling
-======================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +22,8 @@ body {
   color: var(--secondary-color);
 }
 
-.app-container {
-  min-height: 100vh;
+.dexoacademy-app-container {
+  min-height: 90vh;
   background: radial-gradient(circle, var(--gradient-start) 0%, var(--gradient-end) 100%);
   display: flex;
   flex-direction: column;
@@ -34,19 +32,38 @@ body {
 /* =======================
    Header + Navbar
 ======================= */
-.header {
+.dexoacademy-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 150px;
+
+  /* Make header animate step-by-step */
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: headerSlideIn 1.8s ease forwards;
 }
 
-.logo {
+@keyframes headerSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dexoacademy-logo {
   height: 55px;
   max-width: 180px;
+  animation: headerItemFade 1.5s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
-.navbar ul {
+.dexoacademy-navbar ul {
   list-style: none;
   display: flex;
   gap: 30px;
@@ -54,7 +71,28 @@ body {
   padding: 0;
 }
 
-.nav-link {
+.dexoacademy-navbar li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: headerItemFade 1.5s ease forwards;
+}
+
+.dexoacademy-navbar li:nth-child(1) { animation-delay: 0.6s; }
+.dexoacademy-navbar li:nth-child(2) { animation-delay: 0.9s; }
+.dexoacademy-navbar li:nth-child(3) { animation-delay: 1.2s; }
+
+@keyframes headerItemFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dexoacademy-nav-link {
   text-decoration: none;
   color: var(--secondary-color);
   padding: 12px 20px;
@@ -63,11 +101,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.nav-link.active {
+.dexoacademy-nav-link.active {
   background-color: var(--primary-color);
 }
 
-.contact-button {
+.dexoacademy-contact-button {
   background-color: transparent;
   color: var(--secondary-color);
   border: 2px solid var(--secondary-color);
@@ -78,35 +116,41 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+
+  /* animate last */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: headerItemFade 1.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
-.contact-button:hover {
+.dexoacademy-contact-button:hover {
   background-color: var(--secondary-color);
   color: var(--background-color);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
   transform: scale(1.05);
 }
 
-.burger-menu-button,
-.mobile-menu {
+.dexoacademy-burger-menu-button,
+.dexoacademy-mobile-menu {
   display: none;
 }
 
 /* =======================
    Hero Section
 ======================= */
-.hero-section {
+.dexoacademy-hero-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-grow: 1;
-  padding: 30px 20px 100px;
+  padding: 1px 20px 100px;
 }
 
-.tagline {
+.dexoacademy-tagline {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   margin: 20px 0;
@@ -119,14 +163,14 @@ body {
   display: inline-block;
 }
 
-.hero-title {
+.dexoacademy-hero-title {
   font-size: 5rem;
   line-height: 1.2;
   font-weight: 600;
   margin: 15px 0 10px;
 }
 
-.hero-subtitle {
+.dexoacademy-hero-subtitle {
   max-width: 900px;
   line-height: 1.6;
   margin: 20px auto 30px;
@@ -134,7 +178,7 @@ body {
   text-align: center;
 }
 
-.cta-buttons {
+.dexoacademy-cta-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -142,8 +186,8 @@ body {
   flex-wrap: wrap;
 }
 
-.cta-apply,
-.cta-demo {
+.dexoacademy-cta-apply,
+.dexoacademy-cta-demo {
   padding: 14px 30px;
   border-radius: 30px;
   font-weight: 700;
@@ -153,37 +197,70 @@ body {
   transition: all 0.3s ease;
 }
 
-.cta-apply {
+.dexoacademy-cta-apply {
   background: linear-gradient(90deg, #0d47a1, #1976d2);
   color: var(--secondary-color);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.cta-apply:hover {
+.dexoacademy-cta-apply:hover {
   background-color: var(--button-hover-red);
 }
 
-.cta-demo {
+.dexoacademy-cta-demo {
   background-color: transparent;
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
 }
 
-.cta-demo:hover {
+.dexoacademy-cta-demo:hover {
   background-color: rgba(47, 10, 122, 0.1);
+}
+
+/* =======================
+   Step-by-step Reveal (Hero)
+======================= */
+.dexoacademy-seq > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.dexoacademy-seq.is-visible > * {
+  animation: dexo-step-in 1.6s ease forwards;
+}
+
+.dexoacademy-seq.is-visible > *:nth-child(n) {
+  animation-delay: calc(var(--i) * 0.8s);
+}
+
+@keyframes dexo-step-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(3px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-3px);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =======================
    Mobile Navigation
 ======================= */
 @media (max-width: 992px) {
-  .navbar,
-  .contact-button {
+  .dexoacademy-navbar,
+  .dexoacademy-contact-button {
     display: none;
   }
 
-  .burger-menu-button {
+  .dexoacademy-burger-menu-button {
     display: block;
     background: transparent;
     border: none;
@@ -193,13 +270,14 @@ body {
     z-index: 200;
   }
 
-  .mobile-menu {
+  .dexoacademy-mobile-menu {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     background-color: #000;
     z-index: 100;
-    transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
     display: flex;
     flex-direction: column;
@@ -207,13 +285,15 @@ body {
     align-items: center;
   }
 
-  .mobile-menu.open {
+  .dexoacademy-mobile-menu.open {
     transform: translateX(0);
+    animation: headerSlideIn 1.5s ease forwards;
   }
 
-  .close-menu-button {
+  .dexoacademy-close-menu-button {
     position: absolute;
-    top: 20px; right: 20px;
+    top: 20px;
+    right: 20px;
     background: transparent;
     border: none;
     color: white;
@@ -221,7 +301,7 @@ body {
     cursor: pointer;
   }
 
-  .mobile-navbar ul {
+  .dexoacademy-mobile-navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -231,48 +311,68 @@ body {
     text-align: center;
   }
 
-  .mobile-navbar a {
+  .dexoacademy-mobile-navbar a {
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
     padding: 10px 0;
   }
 
-  .mobile-navbar a.active { color: #ff0000; }
+  .dexoacademy-mobile-navbar a.active {
+    color: #ff0000;
+  }
 }
 
 /* =======================
    Tablet & Mobile Hero Adjustments
 ======================= */
 @media (max-width: 768px) {
-  .logo { height: 40px; }
+  .dexoacademy-logo {
+    height: 40px;
+  }
 
-  .hero-title { font-size: 2.5rem; }
-  .hero-subtitle { font-size: 1rem; max-width: 90%; }
-  .tagline { font-size: 0.9rem; }
+  .dexoacademy-hero-title {
+    font-size: 2.5rem;
+  }
 
-  .cta-buttons {
-    flex-direction: row;   /* ✅ keep same line */
-    flex-wrap: wrap;       /* ✅ wrap if too small */
+  .dexoacademy-hero-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .dexoacademy-tagline {
+    font-size: 0.9rem;
+  }
+
+  .dexoacademy-cta-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
   }
 
-  .cta-apply,
-  .cta-demo {
-    width: auto;           /* ✅ no full-width */
+  .dexoacademy-cta-apply,
+  .dexoacademy-cta-demo {
+    width: auto;
     min-width: 120px;
   }
 }
 
 @media (max-width: 480px) {
-  .header { padding: 20px; }
+  .dexoacademy-header {
+    padding: 20px;
+  }
 
-  .hero-title { font-size: 2rem; }
-  .hero-subtitle { font-size: 0.85rem; }
+  .dexoacademy-hero-title {
+    font-size: 2rem;
+  }
 
-  .cta-apply,
-  .cta-demo {
+  .dexoacademy-hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .dexoacademy-cta-apply,
+  .dexoacademy-cta-demo {
     padding: 12px 20px;
     font-size: 0.9rem;
   }

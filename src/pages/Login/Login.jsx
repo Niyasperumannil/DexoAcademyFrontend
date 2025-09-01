@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
+ 
   const handleLogin = e => {
     e.preventDefault();
     if (
@@ -15,7 +15,7 @@ const Login = () => {
       password === 'AsliAcademy@innovation'
     ) {
       setError('');
-      navigate('/Admin-panel'); // ✅ Redirect to Home page
+      navigate('/Admin-panel'); 
     } else {
       setError('Invalid email or password');
     }

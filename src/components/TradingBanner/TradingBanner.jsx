@@ -8,13 +8,14 @@ export default function HeroBanner() {
         {/* Text Section */}
         <div className="text-section">
           <h1 className="banner-title">
-            Trading Made Simple<br />and Rewarding
+            Digital Marketing Made<br />Simple and Effective
           </h1>
           <p className="banner-subtitle">
-            Take control of your financial future. Join Pipstick’s community and learn strategies that lead to real success.
+            Take control of your career. Join Dexo Academy’s community and master
+            SEO, Social Media, and Paid Ads with real-world strategies.
           </p>
           <button className="banner-cta">
-            Join Our Community
+            Join Our Academy
           </button>
         </div>
 
@@ -22,7 +23,7 @@ export default function HeroBanner() {
         <div className="image-section">
           <img
             src="https://pipstick.in/wp-content/uploads/2025/04/Chart12.png"
-            alt="rising chart"
+            alt="digital marketing strategy"
           />
         </div>
       </div>

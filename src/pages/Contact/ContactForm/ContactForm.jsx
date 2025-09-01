@@ -125,9 +125,7 @@ const ContactForm = () => {
       <div className="contact-right">
         <h3>Office Address</h3>
         <p>
-          <FaMapMarkerAlt className="icon" /> Fourth floor-2410, T2,
-          2/1149/I155, HiLITE Business Park, HiLITE City, NH 17 Thondayad
-          By-pass, Guruvayoorappan College P.O, Calicut–673 014
+          <FaMapMarkerAlt className="icon" /> Trimurti Tower, AKG Rd, Cherpulassery, Kerala 679503
         </p>
 
         <h3>Phone Number</h3>
@@ -137,7 +135,7 @@ const ContactForm = () => {
 
         <h3>Email Address</h3>
         <p>
-          <FaEnvelope className="icon" /> info@pipstick.in
+          <FaEnvelope className="icon" /> info@dexo.in
         </p>
       </div>
     </div>

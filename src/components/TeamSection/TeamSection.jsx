@@ -13,19 +13,24 @@ const TeamSection = () => {
     <section className="team-section">
       <div className="team-content" data-aos="fade-right">
         <button className="team-tag">Our Team</button>
-<h1 className="team-heading">
-  Experts Guiding Your<br />
-  Trading Journey
-</h1>
+        <h1 className="team-heading">
+          Experts Guiding Your<br />
+          Digital Marketing Journey
+        </h1>
 
         <p className="team-description">
-          Led by experienced traders and analysts, Pipstick equips you with the skills to navigate today’s markets.
+          Led by experienced marketers and strategists, Dexo Academy equips you with the skills to excel in today’s
+          competitive digital landscape.
         </p>
         <button className="join-button">Join Now</button>
       </div>
 
       <div className="team-image-container" data-aos="fade-left">
-        <img src='https://pipstick.in/wp-content/uploads/2025/04/About-Us-Main.png'alt="Team" className="team-image" />
+        <img
+          src="https://pipstick.in/wp-content/uploads/2025/04/About-Us-Main.png"
+          alt="Team"
+          className="team-image"
+        />
       </div>
     </section>
   );

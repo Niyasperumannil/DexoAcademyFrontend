@@ -2,16 +2,46 @@ import React from 'react';
 import './TestimonialsSection.css';
 
 const testimonials = [
-  { name: 'Amit D', message: 'The instructors explain every concept clearly, with real examples. I’ve already recovered my course fee through my profits!', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Neha S', message: 'As a complete beginner, I was nervous about trading. Pipstick made everything easy to understand. Now I trade daily!', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Sana K', message: 'I tried free YouTube content before, but nothing comes close to Pipstick’s structured approach. Totally worth it.', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Raj P', message: 'Great experience with Pipstick, learned a lot and earned well!', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Kiran M', message: 'The trading strategies are simple and effective. Recommended!', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Neha S', message: 'Pipstick’s guidance gave me confidence to trade independently.', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Sana K', message: 'Support and resources are amazing. Happy to be part of this.', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  { name: 'Amit D', message: 'The community is very supportive and the courses are well-structured.', avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' },
-  
-  
+  { 
+    name: 'Amit D', 
+    message: 'The instructors explain every digital marketing concept clearly with real-world examples. I’ve already applied strategies that boosted my freelance projects!', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Neha S', 
+    message: 'As a complete beginner, I was nervous about digital marketing. Dexo Academy made everything easy to understand. Now I run campaigns confidently!', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Sana K', 
+    message: 'I tried free YouTube content before, but nothing comes close to Dexo’s structured approach to SEO and social media marketing. Totally worth it.', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Raj P', 
+    message: 'Great experience with Dexo Academy! I learned content marketing and already landed my first client.', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Kiran M', 
+    message: 'The strategies for Google Ads and social media marketing are simple yet effective. Highly recommended!', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Neha S', 
+    message: 'Dexo’s guidance gave me the confidence to handle digital campaigns independently for my startup.', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Sana K', 
+    message: 'The support and resources are amazing. I’m happy to be part of this growing digital marketing community.', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
+  { 
+    name: 'Amit D', 
+    message: 'The community is very supportive and the courses are practical. I now understand how to scale businesses online.', 
+    avatar: 'https://pipstick.in/wp-content/uploads/2025/04/Story-main.png' 
+  },
 ];
 
 const TestimonialsSection = () => (
@@ -19,7 +49,7 @@ const TestimonialsSection = () => (
     <div className="testimonials-header">
       <button className="label-button">Testimonials</button>
       <h2>What They <span>Say</span> About Us?</h2>
-      <p><strong>200+ People Have Said How Good Pipstick</strong></p>
+      <p><strong>200+ Learners Have Shared Their Success with Dexo Academy</strong></p>
     </div>
 
     <div className="testimonials-marquee-wrapper">
@@ -35,7 +65,6 @@ const TestimonialsSection = () => (
               <p className="message">{t.message}</p>
             </div>
           ))}
-          {/* Duplicate for seamless scroll */}
           {testimonials.slice(0, 4).map((t, i) => (
             <div key={`duplicate-down-${i}`} className="testimonial-card">
               <div className="header">
@@ -60,7 +89,6 @@ const TestimonialsSection = () => (
               <p className="message">{t.message}</p>
             </div>
           ))}
-          {/* Duplicate for seamless scroll */}
           {testimonials.slice(4, 8).map((t, i) => (
             <div key={`duplicate-up-${i}`} className="testimonial-card">
               <div className="header">
@@ -72,7 +100,9 @@ const TestimonialsSection = () => (
           ))}
         </div>
       </div>
-       <div className="testimonials-marquee marquee-down">
+
+      {/* Extra duplicate columns for flow (unchanged) */}
+      <div className="testimonials-marquee marquee-down">
         <div className="testimonials-list">
           {testimonials.slice(0, 4).map((t, i) => (
             <div key={i} className="testimonial-card">
@@ -83,7 +113,6 @@ const TestimonialsSection = () => (
               <p className="message">{t.message}</p>
             </div>
           ))}
-          {/* Duplicate for seamless scroll */}
           {testimonials.slice(0, 4).map((t, i) => (
             <div key={`duplicate-down-${i}`} className="testimonial-card">
               <div className="header">
@@ -95,6 +124,7 @@ const TestimonialsSection = () => (
           ))}
         </div>
       </div>
+
       <div className="testimonials-marquee marquee-up">
         <div className="testimonials-list">
           {testimonials.slice(4, 8).map((t, i) => (
@@ -106,7 +136,6 @@ const TestimonialsSection = () => (
               <p className="message">{t.message}</p>
             </div>
           ))}
-          {/* Duplicate for seamless scroll */}
           {testimonials.slice(4, 8).map((t, i) => (
             <div key={`duplicate-up-${i}`} className="testimonial-card">
               <div className="header">
@@ -118,7 +147,6 @@ const TestimonialsSection = () => (
           ))}
         </div>
       </div>
-      
     </div>
   </section>
 );

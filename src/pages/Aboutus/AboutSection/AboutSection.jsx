@@ -20,14 +20,15 @@ export default function AboutSection() {
       </div>
       <div className="about-right">
         <p>
-          Pipstick was founded by two young market enthusiasts who turned their passion
-          for trading into a purpose — to empower others with the knowledge, discipline,
-          and tools needed to navigate financial markets successfully. What started as a
-          small initiative between two friends has grown into a full-fledged trading
-          education hub trusted by thousands. At Pipstick, we focus on simplifying
-          complex trading concepts through practical, real-world strategies. Our approach
-          blends experience, innovation, and mentorship — guiding learners from the
-          basics to advanced techniques that truly work in volatile markets.
+          Dexo Academy was founded by two passionate digital marketers who turned their
+          vision into a mission — to equip students and professionals with the skills,
+          strategies, and tools needed to succeed in the digital era. What began as a
+          small initiative between two friends has now grown into a full-fledged Digital
+          Marketing Institute trusted by learners across the region. At Dexo, we focus on
+          simplifying complex concepts of SEO, social media, paid ads, and content
+          strategy through practical, hands-on training. Our approach combines industry
+          experience, innovation, and mentorship — guiding learners from the basics to
+          advanced techniques that truly drive results in the real world.
         </p>
       </div>
     </section>
