@@ -9,7 +9,7 @@
   grid-template-columns: repeat(3, 1fr);
     background: linear-gradient(90deg, #000000,#120b38,#000000);
   gap: 1.5rem;
-  padding: 6rem;
+  padding: 12rem;
 }
 
 .blog-card {
