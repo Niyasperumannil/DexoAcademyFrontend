@@ -252,14 +252,16 @@ body {
   .tagline { font-size: 0.9rem; }
 
   .cta-buttons {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;   /* ✅ keep same line */
+    flex-wrap: wrap;       /* ✅ wrap if too small */
+    gap: 10px;
+    justify-content: center;
   }
 
   .cta-apply,
   .cta-demo {
-    width: 100%;
-    max-width: 250px;
+    width: auto;           /* ✅ no full-width */
+    min-width: 120px;
   }
 }
 
