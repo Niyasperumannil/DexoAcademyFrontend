@@ -147,7 +147,8 @@ body {
   align-items: center;
   text-align: center;
   flex-grow: 1;
-  padding: 1px 20px 100px;
+  padding: 1px 10px 140px;
+  margin-left: 60px;
 }
 
 .dexoacademy-tagline {
