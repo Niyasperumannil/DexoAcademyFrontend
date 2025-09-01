@@ -11,9 +11,9 @@
 .marquee-wrapper {
   overflow: hidden;
   background: linear-gradient(90deg, #000000, #120b38, #000000);
-  padding: 40px 100px;
-  margin-left: 200px;
-  margin-right: 200px;
+  padding: 40px 160px;
+  margin-left: 150px;
+  margin-right: 150px;
   max-width: 1700px;
 }
 

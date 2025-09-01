@@ -1,6 +1,6 @@
 .logo-container {
   display: inline-block;
-  max-width: 200px;   /* Prevents it from blowing up */
+  max-width: 250px;   /* Prevents it from blowing up */
 }
 
 .circular-logo {
