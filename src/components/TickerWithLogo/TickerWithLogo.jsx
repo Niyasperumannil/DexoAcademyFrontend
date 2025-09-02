@@ -1,55 +1,36 @@
 import React from 'react';
 import './TickerWithLogo.css';
 
+// ✅ Import logo images
+import metaLogo from '../../../public/meta-removebg-preview.png';
+import googleAdsLogo from '../../../public/adwords-removebg-preview.png';
+import wordpressLogo from '../../../public/wordpress-removebg-preview.png';
+import linkedinLogo from '../../../public/linkedin-removebg-preview.png';
+import shopifyLogo from '../../../public/shopify-removebg-preview.png';
+import youtubeLogo from '../../../public/youtube-removebg-preview.png';
+import instagramLogo from '../../../public/instagram-removebg-preview.png';
+import googleLogo from '../../../public/google-removebg-preview.png';
+import photoshopLogo from '../../../public/photoshop-removebg-preview.png';
+import whatsappLogo from '../../../public/whatsapp-removebg-preview.png';
+import mailchimpLogo from '../../../public/ma.png';   // ✅ Mailchimp
+import ahrefsLogo from '../../../public/ahrefs-removebg-preview.png';       // ✅ Ahrefs
+import analyticsLogo from '../../../public/analyitics.png'; // ✅ Google Analytics
+import spyfuLogo from '../../../public/spy.png';         // ✅ SpyFu
+
 const courses = [
-  {
-    name: 'SEO Mastery',
-    description: 'Boost rankings & traffic',
-    positive: true,
-    icon: '🔍',
-  },
-  {
-    name: 'Social Media Marketing',
-    description: 'Grow your brand online',
-    positive: true,
-    icon: '📱',
-  },
-  {
-    name: 'Google Ads (PPC)',
-    description: 'Drive instant leads',
-    positive: true,
-    icon: '💰',
-  },
-  {
-    name: 'Email Marketing',
-    description: 'Engage with audiences',
-    positive: true,
-    icon: '📧',
-  },
-  {
-    name: 'Content Marketing',
-    description: 'Attract & convert clients',
-    positive: true,
-    icon: '✍️',
-  },
-  {
-    name: 'Analytics & Reporting',
-    description: 'Track performance',
-    positive: true,
-    icon: '📊',
-  },
-  {
-    name: 'Affiliate Marketing',
-    description: 'Earn passive income',
-    positive: true,
-    icon: '🤝',
-  },
-  {
-    name: 'Brand Strategy',
-    description: 'Build strong identity',
-    positive: true,
-    icon: '🎯',
-  },
+  { name: 'Meta Ads', description: 'Run powerful ad campaigns', logo: metaLogo },
+  { name: 'Google Ads', description: 'Drive instant leads', logo: googleAdsLogo },
+  { name: 'WordPress', description: 'Build websites easily', logo: wordpressLogo },
+  { name: 'LinkedIn Marketing', description: 'Grow professional network', logo: linkedinLogo },
+  { name: 'Shopify', description: 'Launch online stores', logo: shopifyLogo },
+  { name: 'YouTube Marketing', description: 'Boost video reach', logo: youtubeLogo },
+  { name: 'Instagram Growth', description: 'Engage & convert followers', logo: instagramLogo },
+  { name: 'Google Analytics', description: 'Track performance', logo: analyticsLogo }, // ✅ updated with real GA logo
+  { name: 'Photoshop', description: 'Design like a pro', logo: photoshopLogo },
+  { name: 'WhatsApp Marketing', description: 'Connect with your audience', logo: whatsappLogo },
+  { name: 'Mailchimp', description: 'Email marketing made easy', logo: mailchimpLogo }, // ✅ new
+  { name: 'Ahrefs', description: 'SEO & backlinks analysis', logo: ahrefsLogo },       // ✅ new
+  { name: 'SpyFu', description: 'Competitor keyword research', logo: spyfuLogo },      // ✅ new
 ];
 
 const InstituteTicker = () => {
@@ -68,7 +49,7 @@ const InstituteTicker = () => {
             {[...row, ...row].map((item, index) => (
               <div key={index} className="institute-item">
                 <div className="institute-name">
-                  <span className="institute-icon">{item.icon}</span> {item.name}
+                  <img src={item.logo} alt={item.name} className="institute-logo" /> {item.name}
                 </div>
                 <div className="institute-desc">{item.description}</div>
                 {index !== row.length * 2 - 1 && <div className="separator" />}

@@ -4,9 +4,9 @@ import './Banner.css';
 const Banner = () => {
   const content = (
     <>
-      <span className="highlight">*</span> No Hype. Just Marketing
-      <span className="highlight">*</span> Join the Dexo Academy
-      <span className="highlight">*</span> Learn. Apply. Grow.
+      <span className="highlight"></span> No Hype. Just Marketing
+      <span className="highlight"></span> Join the Dexo Academy
+      <span className="highlight"></span> Learn. Apply. Grow.
     </>
   );
 

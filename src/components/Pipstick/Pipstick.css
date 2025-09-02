@@ -66,10 +66,33 @@ body {
   line-height: 1.6;
   color: #b0b7cc;
 }
+.read-more {
+  background: linear-gradient(90deg, #1114cb, #1e40af); /* blue gradient */
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 900;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.read-more:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb); /* reverse gradient */
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.8), 0 0 40px rgba(37, 99, 235, 0.6);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.read-more:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+}
 
 .join-btn {
-  background: #220852;
-  color: white;
+  background: #2c1653;
+  color: rgb(124, 24, 24);
   padding: 12px 28px;
   font-size: 1rem;
   font-weight: 600;
