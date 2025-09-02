@@ -129,7 +129,7 @@ Trade Smarter        </h1>
         <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
 <button
   className="dexoacademy-cta-demo"
-  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
 
 >
   Be a Part of Us

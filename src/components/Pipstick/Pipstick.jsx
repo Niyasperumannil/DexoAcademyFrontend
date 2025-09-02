@@ -46,7 +46,7 @@ const Pipstick = () => {
           </p>
 <button
   className="read-more"
-  onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
 >
 Enroll Now</button>        </div>
 

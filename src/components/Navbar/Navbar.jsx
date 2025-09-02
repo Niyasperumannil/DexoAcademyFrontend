@@ -138,7 +138,7 @@ function App() {
 
   <button
     className="dexoacademy-cta-apply"
-    onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+    onClick={() => window.open("https://wa.me/9187142 57276", "_blank")}
   >
     Apply Now
   </button>

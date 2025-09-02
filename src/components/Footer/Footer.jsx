@@ -41,9 +41,9 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Contact</h3>
             <ul>
-              <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+              <li><a href="tel:+911234567890">📞 +91 87142 57276</a></li>
               <li><a href="mailto:info@dexoacademy.com">✉️ info@dexoacademy.com</a></li>
-              <li><a href="#">🏢 123 Dexo Street, Kochi, India</a></li>
+              <li><a href="#">Trimurti Tower, 2nd floor,AKG Rd, Cherpulassery, Kerala 679503</a></li>
             </ul>
           </div>
         </div>

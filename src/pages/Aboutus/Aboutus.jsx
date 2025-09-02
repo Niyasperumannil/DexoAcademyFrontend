@@ -7,6 +7,7 @@ import MissionVision from './MissionVision/MissionVision.jsx';
 import TradingBanner from '../../components/TradingBanner/TradingBanner.jsx';
 import Banner from '../../components/Banner/Banner.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
+import MapEmbed from './MapEmbed/MapEmbed.jsx';
 
 function Aboutus() {
   return (
@@ -18,6 +19,7 @@ function Aboutus() {
       <MissionVision />
       <TradingBanner />
       <Banner />
+      <MapEmbed />
       <Footer />
 
     </>
