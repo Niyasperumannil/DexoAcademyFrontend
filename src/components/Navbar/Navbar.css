@@ -331,6 +331,17 @@ body {
   .dexoacademy-logo {
     height: 40px;
   }
+.dexoacademy-hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  padding: 1px 10px 140px;
+  margin-left: 1px;
+}
 
   .dexoacademy-hero-title {
     font-size: 2.5rem;

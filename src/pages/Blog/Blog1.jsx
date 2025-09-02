@@ -33,7 +33,7 @@ function App() {
       <header className="dexoacademy-header">
         <div className="dexoacademy-logo-container">
           <img
-            src="dexologoo.png"
+            src="/dexologoo.png"
             alt="Dexo Academy Logo"
             className="dexoacademy-logo"
           />
