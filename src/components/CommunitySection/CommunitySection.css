@@ -51,6 +51,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 1200px;
+  margin-right: 20px;
 }
 
 .community-content h2 {
