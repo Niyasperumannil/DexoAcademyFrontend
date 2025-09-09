@@ -18,23 +18,23 @@ import analyticsLogo from '../../../public/analyitics.png'; // ✅ Google Analyt
 import spyfuLogo from '../../../public/spy.png';         // ✅ SpyFu
 
 const courses = [
-  { name: 'Meta Ads', description: 'Run powerful ad campaigns', logo: metaLogo },
-  { name: 'Google Ads', description: 'Drive instant leads', logo: googleAdsLogo },
-  { name: 'WordPress', description: 'Build websites easily', logo: wordpressLogo },
-  { name: 'LinkedIn Marketing', description: 'Grow professional network', logo: linkedinLogo },
-  { name: 'Shopify', description: 'Launch online stores', logo: shopifyLogo },
-  { name: 'YouTube Marketing', description: 'Boost video reach', logo: youtubeLogo },
-  { name: 'Instagram Growth', description: 'Engage & convert followers', logo: instagramLogo },
-  { name: 'Google Analytics', description: 'Track performance', logo: analyticsLogo }, // ✅ updated with real GA logo
-  { name: 'Photoshop', description: 'Design like a pro', logo: photoshopLogo },
-  { name: 'WhatsApp Marketing', description: 'Connect with your audience', logo: whatsappLogo },
-  { name: 'Mailchimp', description: 'Email marketing made easy', logo: mailchimpLogo }, // ✅ new
-  { name: 'Ahrefs', description: 'SEO & backlinks analysis', logo: ahrefsLogo },       // ✅ new
-  { name: 'SpyFu', description: 'Competitor keyword research', logo: spyfuLogo },      // ✅ new
+  { name: 'Meta Ads',  logo: metaLogo },
+  { name: 'Google Ads',  logo: googleAdsLogo },
+  { name: 'WordPress',  logo: wordpressLogo },
+  { name: 'LinkedIn Marketing',  logo: linkedinLogo },
+  { name: 'Shopify', logo: shopifyLogo },
+  { name: 'YouTube Marketing', logo: youtubeLogo },
+  { name: 'Instagram Growth',  logo: instagramLogo },
+  { name: 'Google Analytics',  logo: analyticsLogo }, // ✅ updated with real GA logo
+  { name: 'Photoshop',  logo: photoshopLogo },
+  { name: 'WhatsApp Marketing',  logo: whatsappLogo },
+  { name: 'Mailchimp',  logo: mailchimpLogo }, // ✅ new
+  { name: 'Ahrefs',  logo: ahrefsLogo },       // ✅ new
+  { name: 'SpyFu',  logo: spyfuLogo },      // ✅ new
 ];
 
 const InstituteTicker = () => {
-  const chunkSize = Math.ceil(courses.length / 3);
+  const chunkSize = Math.ceil(courses.length / 2);
   const rows = [
     courses.slice(0, chunkSize),
     courses.slice(chunkSize, chunkSize * 2),

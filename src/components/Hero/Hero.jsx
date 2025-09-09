@@ -31,7 +31,7 @@ export default function Hero() {
 
       {/* Circular Badge */}
       <div className="hero-badge">
-        <span>• NO HYPE • JUST TRADE • NO HYPE • JUST TRADE •</span>
+        <span>• NO HYPE • JUST MARKET • NO HYPE • JUST MARKET •</span>
         <div className="badge-icon">↗</div>
       </div>
     </section>
