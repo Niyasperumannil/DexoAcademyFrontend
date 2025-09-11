@@ -98,7 +98,7 @@ function App() {
       <main className="dexoacademy-hero-section">
         <p className="dexoacademy-tagline">Learn. Apply. Repeat.</p>
         <h1 className="dexoacademy-hero-title">
-          We're Here to Help You <br /> Trade Smarter
+          We're Here to Help You <br /> Marketing Smarter
         </h1>
         <p className="dexoacademy-hero-subtitle">
           Join our Digital Marketing Course in Cherpulassery and gain
