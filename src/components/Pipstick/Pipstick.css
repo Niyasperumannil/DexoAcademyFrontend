@@ -203,11 +203,12 @@ body {
 ================================= */
 @media (max-width: 768px) {
   .pipstick-container {
-    padding: 20px;
+    padding: 1px;
   }
 
   .pipstick-container h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding-right: 29px;
   }
 
   .content-wrapper {
@@ -218,7 +219,7 @@ body {
 
   .left-card {
     width: 100%;
-    padding: 1.5rem;
+    padding: 0.1rem;
     text-align: center;
   }
 
