@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Aboutus.css";
 
@@ -8,24 +8,6 @@ function App() {
 
   const handleContactClick = () => navigate("/contact");
   const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  // Intersection observer for hero reveal
-  const heroRef = useRef(null);
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("is-visible");
-          obs.unobserve(el);
-        }
-      },
-      { threshold: 0.25 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <div className="dexoacademy-app-container">
@@ -112,28 +94,26 @@ function App() {
         </nav>
       </div>
 
-      {/* HERO SECTION with step reveal */}
-      <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
-        <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
-          Learn. Apply. Repeat.
-     </p>
-        <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
-We're Here to Help You          <br />
-Trade Smarter        </h1>
-        <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
+      {/* HERO SECTION */}
+      <main className="dexoacademy-hero-section">
+        <p className="dexoacademy-tagline">Learn. Apply. Repeat.</p>
+        <h1 className="dexoacademy-hero-title">
+          We're Here to Help You <br /> Trade Smarter
+        </h1>
+        <p className="dexoacademy-hero-subtitle">
           Join our Digital Marketing Course in Cherpulassery and gain
           industry-ready skills with hands-on training, real client
           projects, and expert-led sessions designed to make you job-ready.
         </p>
 
-        <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-<button
-  className="dexoacademy-cta-demo"
-  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
-
->
-  Be a Part of Us
-</button>        </div>
+        <div className="dexoacademy-cta-buttons">
+          <button
+            className="dexoacademy-cta-demo"
+            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+          >
+            Be a Part of Us
+          </button>
+        </div>
       </main>
     </div>
   );

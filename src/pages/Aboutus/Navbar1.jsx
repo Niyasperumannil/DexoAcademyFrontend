@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Aboutus.css";
 
@@ -8,24 +8,6 @@ function App() {
 
   const handleContactClick = () => navigate("/contact");
   const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  // Intersection observer for hero reveal
-  const heroRef = useRef(null);
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("is-visible");
-          obs.unobserve(el);
-        }
-      },
-      { threshold: 0.25 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <div className="dexoacademy-app-container">
@@ -112,27 +94,28 @@ function App() {
         </nav>
       </div>
 
-      {/* HERO SECTION with step reveal */}
-      <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
-        <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
-          Learn. Apply. Repeat.
+      {/* HERO SECTION */}
+      <main className="dexoacademy-hero-section">
+        <p className="dexoacademy-tagline">Learn. Apply. Repeat.</p>
+        <h1 className="dexoacademy-hero-title">
+          Step into the World of <br />
+          Marketing Excellence
+        </h1>
+        <p className="dexoacademy-hero-subtitle">
+          At Dexo, we empower aspiring digital marketers to thrive in today’s
+          competitive online world. With expert-led training, cutting-edge
+          tools, and hands-on mentorship, our platform helps you master SEO,
+          social media, paid ads, and analytics—equipping you with the skills
+          to create, manage, and scale impactful digital campaigns.
         </p>
-        <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
-Step into the World of          <br />
-Marketing Excellence        </h1>
-        <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
-          At Dexo, we empower aspiring digital marketers to thrive in today’s competitive online world. With expert-led training, cutting-edge tools, and hands-on mentorship, our platform helps you master SEO, social media, paid ads, and analytics—equipping you with the skills to create, manage, and scale impactful digital campaign
 
-
-        </p>
-
-        <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-<button
-  className="dexoacademy-cta-demo"
-  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
->
-  Book a Free Demo
-</button>
+        <div className="dexoacademy-cta-buttons">
+          <button
+            className="dexoacademy-cta-demo"
+            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+          >
+            Book a Free Demo
+          </button>
         </div>
       </main>
     </div>

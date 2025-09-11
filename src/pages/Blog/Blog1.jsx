@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./aboutus.css";
 
@@ -8,24 +8,6 @@ function App() {
 
   const handleContactClick = () => navigate("/contact");
   const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  // Intersection observer for hero reveal
-  const heroRef = useRef(null);
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("is-visible");
-          obs.unobserve(el);
-        }
-      },
-      { threshold: 0.25 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <div className="dexoacademy-app-container">
@@ -43,19 +25,13 @@ function App() {
         <nav className="dexoacademy-navbar">
           <ul>
             <li>
-              <NavLink to="/" className="dexoacademy-nav-link">
-                Home
-              </NavLink>
+              <NavLink to="/" className="dexoacademy-nav-link">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="dexoacademy-nav-link">
-                About Us
-              </NavLink>
+              <NavLink to="/about" className="dexoacademy-nav-link">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/blog" className="dexoacademy-nav-link">
-                Blog
-              </NavLink>
+              <NavLink to="/blog" className="dexoacademy-nav-link">Blog</NavLink>
             </li>
           </ul>
         </nav>
@@ -89,46 +65,41 @@ function App() {
         <nav className="dexoacademy-mobile-navbar">
           <ul>
             <li>
-              <NavLink to="/" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
-                Home
-              </NavLink>
+              <NavLink to="/" onClick={toggleMobileMenu} className="dexoacademy-nav-link">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
-                About Us
-              </NavLink>
+              <NavLink to="/about" onClick={toggleMobileMenu} className="dexoacademy-nav-link">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/blog" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
-                Blog
-              </NavLink>
+              <NavLink to="/blog" onClick={toggleMobileMenu} className="dexoacademy-nav-link">Blog</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
-                Contact
-              </NavLink>
+              <NavLink to="/contact" onClick={toggleMobileMenu} className="dexoacademy-nav-link">Contact</NavLink>
             </li>
           </ul>
         </nav>
       </div>
 
-      {/* HERO SECTION with step reveal */}
-      <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
-        <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
-          Learn. Apply. Repeat.
+      {/* HERO SECTION */}
+      <main className="dexoacademy-hero-section">
+        <p className="dexoacademy-tagline">Learn. Apply. Repeat.</p>
+        <h1 className="dexoacademy-hero-title">
+          Stay Ahead with Our <br /> Insights
+        </h1>
+        <p className="dexoacademy-hero-subtitle">
+          Join our Digital Marketing Course in Cherpulassery and gain
+          industry-ready skills with hands-on training, real client
+          projects, and expert-led sessions designed to make you job-ready.
         </p>
-        <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
-Stay Ahead with Our          <br />
-Insights        </h1>
-        <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
-Join our Digital Marketing Course in Cherpulassery and gain industry-ready skills with hands-on training, real client projects, and expert-led sessions designed to make you job-ready.        </p>
 
-        <div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-<button
-  className="dexoacademy-cta-demo"
-  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
->
-Talk to Expert</button>        </div>
+        <div className="dexoacademy-cta-buttons">
+          <button
+            className="dexoacademy-cta-demo"
+            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+          >
+            Talk to Expert
+          </button>
+        </div>
       </main>
     </div>
   );
