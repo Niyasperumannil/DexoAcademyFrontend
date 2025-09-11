@@ -93,46 +93,79 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+/* Mobile Responsive */
+
+@media (min-width: 600px) {
+  .contact-section {
+    padding: 0.5rem 2rem 5rem;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+  }
   .contact-cards {
-    flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .contact-card {
+    padding: 2.5rem;
+    max-width: 350px;
   }
 }
-/* Mobile Responsive */
-@media (max-width: 768px) {
+
+/* Large tablets / small desktops */
+@media (min-width: 900px) {
+  .contact-section {
+    padding: 1rem 3rem 6rem;
+  }
+  .section-title {
+    font-size: 3.5rem;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+  }
+  .contact-cards {
+    gap: 2rem;
+    justify-content: center;
+    padding: 0;
+  }
+  .contact-card {
+    padding: 3rem;
+    max-width: 400px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .contact-section {
+    padding: 2rem 4rem 8rem;
+  }
+  .section-title {
+    font-size: 4rem;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+  }
+  .contact-cards {
+    gap: 2.5rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 400px) {
   .section-title {
     font-size: 2rem;
   }
-
   .section-subtitle {
     font-size: 0.9rem;
-    margin-bottom: 2rem;
   }
-
-  .contact-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
   .contact-card {
-    width: 100%;
-    max-width: 90%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .icon-container {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .contact-card h3 {
-    font-size: 1rem;
-  }
-
-  .contact-card p {
-    font-size: 0.9rem;
+    padding: 1.5rem;
   }
 }
