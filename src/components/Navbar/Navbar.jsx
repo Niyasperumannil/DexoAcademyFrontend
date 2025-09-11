@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
@@ -9,28 +9,10 @@ function App() {
   const handleContactClick = () => navigate("/contact");
   const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Intersection observer for hero reveal
-  const heroRef = useRef(null);
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("is-visible");
-          obs.unobserve(el);
-        }
-      },
-      { threshold: 0.25 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
   return (
-    <div className="dexoacademy-app-container">
+    <div className="dexoacademy-app-container fade-in">
       {/* HEADER */}
-      <header className="dexoacademy-header">
+      <header className="dexoacademy-header fade-in">
         <div className="dexoacademy-logo-container">
           <img
             src="dexologoo.png"
@@ -78,7 +60,11 @@ function App() {
       </header>
 
       {/* MOBILE MENU */}
-      <div className={`dexoacademy-mobile-menu ${isMenuOpen ? "open" : ""}`}>
+      <div
+        className={`dexoacademy-mobile-menu ${
+          isMenuOpen ? "open fade-in" : "fade-out"
+        }`}
+      >
         <button
           className="dexoacademy-close-menu-button"
           onClick={toggleMobileMenu}
@@ -112,40 +98,37 @@ function App() {
         </nav>
       </div>
 
-      {/* HERO SECTION with step reveal */}
-      <main className="dexoacademy-hero-section dexoacademy-seq" ref={heroRef}>
-        <p className="dexoacademy-tagline" style={{ "--i": 1 }}>
+      {/* HERO SECTION */}
+      <main className="dexoacademy-hero-section fade-in">
+        <p className="dexoacademy-tagline">
           Learn. Apply. Repeat.
         </p>
-        <h1 className="dexoacademy-hero-title" style={{ "--i": 2 }}>
+        <h1 className="dexoacademy-hero-title">
           Master Digital Marketing
           <br />
           with Dexo Academy
         </h1>
-        <p className="dexoacademy-hero-subtitle" style={{ "--i": 3 }}>
+        <p className="dexoacademy-hero-subtitle">
           Join our Digital Marketing Course in Cherpulassery and gain
           industry-ready skills with hands-on training, real client
           projects, and expert-led sessions designed to make you job-ready.
         </p>
 
-<div className="dexoacademy-cta-buttons" style={{ "--i": 4 }}>
-  <button
-    className="dexoacademy-cta-demo"
-    onClick={() => window.open("https://www.youtube.com/watch?v=QusJ4fpWQwA", "_blank")}
-  >
-    Try Demo
-  </button>
+        <div className="dexoacademy-cta-buttons">
+          <button
+            className="dexoacademy-cta-demo"
+            onClick={() => window.open("https://www.youtube.com/watch?v=QusJ4fpWQwA", "_blank")}
+          >
+            Try Demo
+          </button>
 
-  <button
-    className="dexoacademy-cta-apply"
-    onClick={() => window.open("https://wa.me/9187142 57276", "_blank")}
-  >
-    Apply Now
-  </button>
-</div>
-
-
-
+          <button
+            className="dexoacademy-cta-apply"
+            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+          >
+            Apply Now
+          </button>
+        </div>
       </main>
     </div>
   );
