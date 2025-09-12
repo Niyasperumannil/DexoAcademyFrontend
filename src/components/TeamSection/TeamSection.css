@@ -1,9 +1,4 @@
-/* TeamSection.css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Your existing TeamSection.css with tweaks */
 
 .team-section {
   display: flex;
@@ -34,11 +29,15 @@
   font-size: 3.2rem;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 1rem;
-  max-width: 27ch;            /* Adjust as needed */
-  text-wrap: balance;         /* Balances words across lines */
+  max-width: 1000px;            /* Adjust as needed */
+
+  /* New stuff: try to balance heading lines */
+  text-wrap: balance;         /* modern browsers will try to balance line lengths */  
+  /* Also ensure wrapping is allowed */
+  white-space: normal;          
+  /* Optional: control line height */
+  line-height: 1.2;            
 }
-
-
 
 .team-description {
   font-size: 1.1rem;
@@ -76,42 +75,62 @@
   height: auto;
   border-radius: 20px;
 }
-@media (max-width: 900px) {
+
+/* MOBILE / RESPONSIVE STYLES */
+@media only screen and (max-width: 1024px) {
   .team-section {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 10px 80px 60px 60px;
   }
-
-  .team-content {
-    max-width: 100%;
-  }
-
   .team-heading {
-    font-size: 2.2rem;
-  }
-
-  .team-description {
-    font-size: 0.95rem;
-  }
-
-  .team-image-container {
-    margin-top: 1.5rem;
+    font-size: 2.6rem;
+    max-width: 80%;  /* so heading wraps more naturally */
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 768px) {
+  .team-section {
+    flex-direction: column;
+    padding: 20px 40px 40px 40px;
+    gap: 40px;
+  }
+  .team-image-container {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .team-content {
+    width: 100%;
+  }
+  .team-heading {
+    font-size: 2.2rem;
+    max-width: 100%;
+  }
+  .team-tag {
+    font-size: 1.6rem;
+  }
+  .team-description {
+    font-size: 1rem;
+  }
+  .join-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .team-section {
+    padding: 10px 20px 30px 20px;
+  }
   .team-heading {
     font-size: 1.8rem;
   }
-
-  .join-button {
-    width: 100%;
-    padding: 12px 0;
-  }
-
   .team-tag {
+    font-size: 1.4rem;
+  }
+  .team-description {
+    font-size: 0.9rem;
+  }
+  .join-button {
+    padding: 10px 20px;
     font-size: 0.8rem;
-    padding: 6px 14px;
   }
 }

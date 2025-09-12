@@ -2,7 +2,7 @@
   background-color: #0d0b1b;
   color: #fff;
   font-family: 'Poppins', Arial, sans-serif;
-  padding: 40px 150px;
+  padding: 1px 150px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -107,12 +107,12 @@
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .footer {
-    padding: 30px 40px;
+    padding: 10px 40px;
   }
 
   .footer-top {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
   }
 
   .footer-logo {
@@ -121,7 +121,7 @@
 
   .footer-links {
     flex-direction: column;
-    gap: 25px;
+    gap: 5px;
   }
 
   .footer-column h3 {
@@ -139,7 +139,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 20px 20px;
+    padding: 10px 20px;
   }
 
   .footer-logo h1 {

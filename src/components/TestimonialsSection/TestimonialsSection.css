@@ -163,15 +163,16 @@
 
 /* Responsive */
 
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .testimonials-header .label-button {
+    font-size: 1.6rem;
+    padding: 8px 16px;
+  }
   .testimonials-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-  .testimonials-marquee-wrapper {
-    height: 300px;
-  }
-  .testimonials-marquee {
-    width: 170px;
+  .testimonials-header p {
+    font-size: 1rem;
+    margin-bottom: 16px;
   }
 }
