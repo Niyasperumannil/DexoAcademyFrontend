@@ -10,6 +10,7 @@ import TestimonialsSection from "../../components/TestimonialsSection/Testimonia
 import TradingBanner from "../../components/TradingBanner/TradingBanner";
 import Articles from "../../components/Articles/Articles";
 import Footer from "../../components/Footer/Footer";
+import "./Home.css"; // Optional CSS file if needed
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,7 @@ export default function Home() {
       {loading ? (
         <LoadingScreen />
       ) : (
-        <>
+        <div className="cherpulassery-home-page">
           <Navbar />
           <TickerWithLogo />
           <Pipstick />
@@ -35,7 +36,7 @@ export default function Home() {
           <TradingBanner />
           <Articles />
           <Footer />
-        </>
+        </div>
       )}
     </>
   );

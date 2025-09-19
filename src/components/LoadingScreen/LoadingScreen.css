@@ -59,22 +59,25 @@
 }
 
 /* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .loading-logo {
-    width: 120px;  /* smaller logo */
-    margin-bottom: 15px;
+    width: 140px; /* reduce logo size on mobile */
+    margin-bottom: 16px;
   }
-  
+
   .loading-title {
     font-size: 18px;
+    letter-spacing: 0.5px;
   }
-  
+
   .loading-title span {
-    font-size: 12px;
+    font-size: 14px;
+    margin-left: 4px;
   }
-  
+
   .loading-bar {
-    width: 100px;  /* narrower loading bar */
-    height: 2px;
+    width: 100px; /* reduce width of loading bar */
+    margin-top: 8px;
   }
 }
+

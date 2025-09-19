@@ -27,27 +27,28 @@ const CommunitySection = () => {
 
   return (
     <section className="community-section" ref={ref}>
-      <div className="community-container">
+      <div className="community-container image-left-content-right">
+        {/* IMAGE ON LEFT */}
         <div className="community-image">
           <img
             src="https://pipstick.in/wp-content/uploads/2025/04/Story-main.png"
             alt="Students in a digital marketing workshop"
           />
         </div>
+        {/* CONTENT ON RIGHT */}
         <div className="community-content">
           <button className="story-button">Our Story</button>
-          <h2>Building a Global Digital Marketing Community</h2>
+          <h2>Trading Made Simple <br />and Rewarding</h2>
           <p>
-            Dexo Academy was founded to bridge the gap between theory and practice,
-            empowering learners to master digital marketing with hands-on strategies
-            used by industry experts worldwide.
+            Take control of your financial future. Join Dexo’s community
+            and learn strategies that lead to real success.
           </p>
-<button
-  className="read-more"
-  onClick={() => window.open("https://wa.me/918714257276", "_blank")}
->
-  Read More
-</button>
+          <button
+            className="read-more"
+            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+          >
+            Join Our Community
+          </button>
         </div>
       </div>
     </section>

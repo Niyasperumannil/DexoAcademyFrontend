@@ -1,41 +1,72 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-function App() {
+function Navbar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleContactClick = () => navigate("/contact");
-  const toggleMobileMenu = () => setIsMenuOpen(!isMenuOpen);
+  const handleContactClick = () => {
+    navigate("/contact");
+    setIsMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 992 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen]);
 
   return (
-    <div className="dexoacademy-app-container fade-in">
-      {/* HEADER */}
-      <header className="dexoacademy-header fade-in">
-        <div className="dexoacademy-logo-container">
+    <div className="cherpulassery-dexo-app-container fade-in">
+      <header className="cherpulassery-dexo-header fade-in">
+        <div className="cherpulassery-dexo-logo-container">
           <img
-            src="dexologoo.png"
-            alt="Dexo Academy Logo"
-            className="dexoacademy-logo"
+            src="Screenshot_2025-09-19_215748-removebg-preview.png"
+            alt="Cherpulassery Dexo Academy Logo"
+            className="cherpulassery-dexo-logo"
           />
         </div>
 
-        {/* Desktop Navbar */}
-        <nav className="dexoacademy-navbar">
-          <ul>
+        <nav className="cherpulassery-dexo-navbar">
+          <ul className="cherpulassery-dexo-nav-list">
             <li>
-              <NavLink to="/" className="dexoacademy-nav-link">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="dexoacademy-nav-link">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 About Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/blog" className="dexoacademy-nav-link">
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 Blog
               </NavLink>
             </li>
@@ -43,54 +74,69 @@ function App() {
         </nav>
 
         <button
-          className="dexoacademy-contact-button"
+          className="cherpulassery-dexo-contact-button desktop-only"
           onClick={handleContactClick}
         >
           Contact
         </button>
 
-        {/* Mobile Burger Menu */}
         <button
-          className="dexoacademy-burger-menu-button"
+          className="cherpulassery-dexo-burger-menu-button mobile-only"
           onClick={toggleMobileMenu}
-          aria-label="Open mobile menu"
+          aria-label={isMenuOpen ? "Close mobile menu" : "Open mobile menu"}
         >
-          ☰
+          {isMenuOpen ? "❌" : "☰"}
         </button>
       </header>
 
-      {/* MOBILE MENU */}
       <div
-        className={`dexoacademy-mobile-menu ${
-          isMenuOpen ? "open fade-in" : "fade-out"
+        className={`cherpulassery-dexo-mobile-menu ${
+          isMenuOpen ? "open fade-in" : "closed fade-out"
         }`}
       >
-        <button
-          className="dexoacademy-close-menu-button"
-          onClick={toggleMobileMenu}
-          aria-label="Close mobile menu"
-        >
-          ❌
-        </button>
-        <nav className="dexoacademy-mobile-navbar">
-          <ul>
+        <nav className="cherpulassery-dexo-mobile-navbar">
+          <ul className="cherpulassery-dexo-mobile-nav-list">
             <li>
-              <NavLink to="/" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
+              <NavLink
+                to="/"
+                onClick={toggleMobileMenu}
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
+              <NavLink
+                to="/about"
+                onClick={toggleMobileMenu}
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 About Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/blog" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
+              <NavLink
+                to="/blog"
+                onClick={toggleMobileMenu}
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 Blog
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" onClick={toggleMobileMenu} className="dexoacademy-nav-link">
+              <NavLink
+                to="/contact"
+                onClick={toggleMobileMenu}
+                className={({ isActive }) =>
+                  "cherpulassery-dexo-nav-link" + (isActive ? " active" : "")
+                }
+              >
                 Contact
               </NavLink>
             </li>
@@ -98,33 +144,37 @@ function App() {
         </nav>
       </div>
 
-      {/* HERO SECTION */}
-      <main className="dexoacademy-hero-section fade-in">
-        <p className="dexoacademy-tagline">
-          Learn. Apply. Repeat.
-        </p>
-        <h1 className="dexoacademy-hero-title">
+      <main className="cherpulassery-dexo-hero-section fade-in">
+        <p className="cherpulassery-dexo-tagline">Learn. Apply. Repeat.</p>
+        <h1 className="cherpulassery-dexo-hero-title">
           Master Digital Marketing
           <br />
           with Dexo Academy
         </h1>
-        <p className="dexoacademy-hero-subtitle">
+        <p className="cherpulassery-dexo-hero-subtitle">
           Join our Digital Marketing Course in Cherpulassery and gain
-          industry-ready skills with hands-on training, real client
-          projects, and expert-led sessions designed to make you job-ready.
+          industry-ready skills with hands-on training, real client projects,
+          and expert-led sessions designed to make you job-ready.
         </p>
 
-        <div className="dexoacademy-cta-buttons">
+        <div className="cherpulassery-dexo-cta-buttons">
           <button
-            className="dexoacademy-cta-demo"
-            onClick={() => window.open("https://www.youtube.com/watch?v=QusJ4fpWQwA", "_blank")}
+            className="cherpulassery-dexo-cta-demo"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/watch?v=QusJ4fpWQwA",
+                "_blank"
+              )
+            }
           >
             Try Demo
           </button>
 
           <button
-            className="dexoacademy-cta-apply"
-            onClick={() => window.open("https://wa.me/918714257276", "_blank")}
+            className="cherpulassery-dexo-cta-apply"
+            onClick={() =>
+              window.open("https://wa.me/918714257276", "_blank")
+            }
           >
             Apply Now
           </button>
@@ -134,4 +184,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbar;

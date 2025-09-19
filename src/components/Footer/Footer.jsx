@@ -9,9 +9,9 @@ const Footer = () => {
       <div className="footer-top">
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/dexologoo.png" alt="Pipstick Academy Logo" />
+          <img src="/Screenshot_2025-09-19_215748-removebg-preview.png" alt="Dexo Academy Logo" />
           <h1>
-             <span>ACADEMY</span>
+            <span>ACADEMY</span>
           </h1>
         </div>
 
@@ -37,13 +37,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info Column (replaced duplicate Community) */}
           <div className="footer-column">
             <h3>Contact</h3>
             <ul>
-              <li><a href="tel:+911234567890">📞 +91 87142 57276</a></li>
+              <li><a href="tel:+918714257276">📞 +91 87142 57276</a></li>
               <li><a href="mailto:info@dexoacademy.com">✉️ info@dexoacademy.com</a></li>
-              <li><a href="#">Trimurti Tower, 2nd floor,AKG Rd, Cherpulassery, Kerala 679503</a></li>
+              <li><a href="#">Trimurti Tower, 2nd floor, AKG Rd, Cherpulassery, Kerala 679503</a></li>
             </ul>
           </div>
         </div>
@@ -52,9 +51,20 @@ const Footer = () => {
       <hr />
 
       {/* Bottom Section */}
-      <div className="footer-bottom">
-        <p>© 2025 Dexo Academy. All Rights Reserved.</p>
-      </div>
+     <div className="footer-bottom">
+  <p className="footer-credit">
+    Developed by{" "}
+    <a
+      href="https://www.dexoinnovation.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="innovation-link"
+    >
+      Dexo Innovation
+    </a>. All Rights Reserved.
+  </p>
+</div>
+
     </footer>
   );
 };

@@ -48,54 +48,44 @@
 /* ==============================
    Tablet (≤ 1024px)
 ============================== */
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .marquee-wrapper {
-    padding: 45px 40px;
-    margin: 0 auto;
-    max-width: 100%;
+    padding: 30px 100px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
   .marquee-text {
     font-size: 24px;
     padding-right: 80px;
   }
-  .marquee-content {
-    animation-duration: 10s;
+}
+
+/* ==============================
+   Smaller Tablet / Large Phones (≤ 768px)
+============================== */
+@media only screen and (max-width: 768px) {
+  .marquee-wrapper {
+    padding: 20px 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .marquee-text {
+    font-size: 20px;
+    padding-right: 60px;
   }
 }
 
 /* ==============================
-   Mobile (≤ 768px)
+   Mobile (≤ 480px)
 ============================== */
-@media (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .marquee-wrapper {
-    padding: 30px 15px;   /* tighter padding */
-    margin: 0 auto;
-    max-width: 100%;
+    padding: 15px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .marquee-text {
-    font-size: 17px;      /* smaller font */
-    padding-right: 50px;  /* reduce gap */
-  }
-  .marquee-content {
-    animation-duration: 9s;
-  }
-}
-
-/* ==============================
-   Small Phones (≤ 480px)
-============================== */
-@media (max-width: 480px) {
-  .marquee-wrapper {
-    padding: 20px 10px;   /* slim padding */
-    margin: 0 auto;
-    max-width: 100%;
-  }
-  .marquee-text {
-    font-size: 14px;      /* optimal readability */
-    padding-right: 35px;  /* minimal spacing */
-    line-height: 1.4;
-  }
-  .marquee-content {
-    animation-duration: 8s;
+    font-size: 16px;
+    padding-right: 40px;
   }
 }

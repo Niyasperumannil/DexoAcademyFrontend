@@ -2,7 +2,7 @@
   background-color: #0d0b1b;
   color: #fff;
   font-family: 'Poppins', Arial, sans-serif;
-  padding: 1px 150px;
+  padding: 40px 150px 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -11,8 +11,9 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Make all columns same height */
+  align-items: stretch;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
@@ -20,6 +21,8 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-logo img {
@@ -42,6 +45,7 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .footer-column {
@@ -49,6 +53,7 @@
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
+  text-align: center;
 }
 
 .footer-column h3 {
@@ -76,12 +81,13 @@
   font-size: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #110a0a;
+  color: #601dcc;
 }
 
 /* Social Icons */
@@ -102,17 +108,36 @@
   font-size: 0.9rem;
   color: #ccc;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.footer-credit {
+  margin: 0;
+}
+
+.innovation-link {
+  color: #1e90ff; /* Innovation blue */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.innovation-link:hover {
+  text-decoration: underline;
+  color: #339cff;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .footer {
-    padding: 10px 40px;
+    padding: 30px 40px;
   }
 
   .footer-top {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 
   .footer-logo {
@@ -121,10 +146,10 @@
 
   .footer-links {
     flex-direction: column;
-    gap: 5px;
+    gap: 30px;
   }
 
-  .footer-column h3 {
+  .footer-column {
     text-align: center;
   }
 
@@ -139,7 +164,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 10px 20px;
+    padding: 20px;
   }
 
   .footer-logo h1 {
@@ -152,5 +177,9 @@
 
   .footer-column ul li {
     margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
   }
 }

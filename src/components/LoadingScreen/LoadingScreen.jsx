@@ -26,7 +26,7 @@ export default function LoadingScreen() {
   return (
     <div className="loading-container">
       <div className="loading-content">
-        <img src="/dexologoo.png" alt="Logo" className="loading-logo" />
+        <img src="/Screenshot_2025-09-19_215748-removebg-preview.png" alt="Logo" className="loading-logo" />
         <h1 className="loading-title">
           DEXO <span>ACADEMY</span>
         </h1>

@@ -1,4 +1,4 @@
-/* Global body styling to make entire page background black */
+/* Global body styling */
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +12,13 @@ body {
   color: #fff;
 }
 
-/* Base styles */
+/* Section animation */
 .community-section {
-  background: linear-gradient(90deg, #000000,#120b38,#000000);
-  padding: 10px 160px 100px 120px;
-  display: flex;
-  align-items: center;
+  background: linear-gradient(90deg, #121018,#1a1050,#000000);
+  border-radius: 20px;
+  padding:1px 100px;
+  margin: 40px auto;
+  max-width: 1500px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -28,37 +29,36 @@ body {
   transform: translateY(0);
 }
 
-.community-container {
-  display: flex;
-  flex-direction: row;
-  max-width: 1900px;
+/* Grid container with image on left, content on right */
+.community-container.image-left-content-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
   width: 100%;
-  gap: 100px;
-  color: white;
 }
 
+/* IMAGE styles */
 .community-image img {
   width: 100%;
   height: auto;
-  padding: 8px 16px;
   border-radius: 15px;
   object-fit: cover;
   max-width: 600px;
 }
 
+/* CONTENT styles */
 .community-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1200px;
-  margin-right: 30px;
 }
 
 .community-content h2 {
-  font-size: 2.9rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
   margin: 20px 0 16px;
+  line-height: 1.2;
 }
 
 .community-content p {
@@ -90,72 +90,94 @@ body {
   background-color: #5a3d3d;
 }
 
-/* Mobile responsive styles */
+/* RESPONSIVE: stack vertically on smaller screens */
+/* === Existing styles above here === */
 
-/* Mobile / small screen first */
-@media only screen and (max-width: 768px) {
+/* MOBILE / TABLET RESPONSIVE STYLES */
+@media (max-width: 1024px) {
   .community-section {
-    padding: 20px;              /* reduce large paddings */
-    flex-direction: column;     /* stack image & content vertically */
-    align-items: flex-start;
+    padding: 40px 60px;
   }
 
-  .community-container {
-    flex-direction: column;
-    gap: 40px;                   /* smaller gap */
-    width: 100%;
-    padding: 0;
+  .community-container.image-left-content-right {
+    display: grid;
+    grid-template-columns: 1fr; /* stack image & content vertically */
+    gap: 40px;
+    text-align: center;
   }
 
   .community-image img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;         /* maybe slightly smaller radius */
-    padding: 0;
+    margin: 0 auto;
+    max-width: 90%; /* some margin on sides */
   }
 
   .community-content {
-    margin-right: 0;
-    max-width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .community-content h2 {
-    font-size: 2rem;             /* reduce font size for h2 */
-    line-height: 1.2;
+    font-size: 2.2rem;
     margin: 16px 0 12px;
   }
 
   .community-content p {
     font-size: 1rem;
+    margin-bottom: 20px;
     line-height: 1.5;
-    margin-bottom: 16px;
   }
 
   .story-button,
   .read-more {
     padding: 10px 20px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
-/* Smaller phones */
-@media only screen and (max-width: 480px) {
+@media (max-width: 600px) {
   .community-section {
-    padding: 10px;
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  .community-container.image-left-content-right {
+    gap: 30px;
   }
 
   .community-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .community-content p {
     font-size: 0.9rem;
+    margin-bottom: 16px;
   }
 
   .story-button,
   .read-more {
     padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smallest phones */
+@media (max-width: 400px) {
+  .community-section {
+    padding: 20px 15px;
+  }
+
+  .community-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .community-content p {
+    font-size: 0.85rem;
+  }
+
+  .story-button,
+  .read-more {
+    padding: 6px 12px;
     font-size: 0.8rem;
   }
 }
+
